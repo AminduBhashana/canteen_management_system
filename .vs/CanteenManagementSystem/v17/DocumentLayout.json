@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\C# Projects\\CanteenManagementSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|d:\\c# projects\\canteenmanagementsystem\\canteenmanagementsystem\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|solutionrelative:canteenmanagementsystem\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\LoginForm.cs",
+              "RelativeDocumentMoniker": "CanteenManagementSystem\\LoginForm.cs",
+              "ToolTip": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\LoginForm.cs [Design]",
+              "RelativeToolTip": "CanteenManagementSystem\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T04:49:04.168Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
