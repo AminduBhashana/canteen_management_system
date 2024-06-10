@@ -1,34 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\C# Projects\\CanteenManagementSystem\\",
+  "WorkspaceRootPath": "E:\\canteen_management_system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|D:\\C# Projects\\CanteenManagementSystem\\canteenmanagementsystem\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|solutionrelative:canteenmanagementsystem\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|d:\\c# projects\\canteenmanagementsystem\\canteenmanagementsystem\\mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|solutionrelative:canteenmanagementsystem\\mainclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|d:\\c# projects\\canteenmanagementsystem\\canteenmanagementsystem\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|solutionrelative:canteenmanagementsystem\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|D:\\C# Projects\\CanteenManagementSystem\\canteenmanagementsystem\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|e:\\canteen_management_system\\canteenmanagementsystem\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|solutionrelative:canteenmanagementsystem\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|D:\\C# Projects\\CanteenManagementSystem\\canteenmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|E:\\canteen_management_system\\canteenmanagementsystem\\frmhome.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|solutionrelative:canteenmanagementsystem\\frmhome.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|E:\\canteen_management_system\\canteenmanagementsystem\\frmhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|solutionrelative:canteenmanagementsystem\\frmhome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|E:\\canteen_management_system\\canteenmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|solutionrelative:canteenmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|D:\\C# Projects\\CanteenManagementSystem\\canteenmanagementsystem\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|solutionrelative:canteenmanagementsystem\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|D:\\C# Projects\\CanteenManagementSystem\\canteenmanagementsystem\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{28E7D445-5755-4563-A92C-360D2CDEA83F}|CanteenManagementSystem\\CanteenManagementSystem.csproj|solutionrelative:canteenmanagementsystem\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,15 +26,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\Program.cs",
+              "DocumentMoniker": "E:\\canteen_management_system\\CanteenManagementSystem\\Program.cs",
               "RelativeDocumentMoniker": "CanteenManagementSystem\\Program.cs",
-              "ToolTip": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\Program.cs",
+              "ToolTip": "E:\\canteen_management_system\\CanteenManagementSystem\\Program.cs",
               "RelativeToolTip": "CanteenManagementSystem\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -54,17 +42,8 @@
               "IsPinned": true
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainClass.cs",
-              "DocumentMoniker": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\MainClass.cs",
-              "RelativeDocumentMoniker": "CanteenManagementSystem\\MainClass.cs",
-              "ToolTip": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\MainClass.cs",
-              "RelativeToolTip": "CanteenManagementSystem\\MainClass.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T08:44:42.272Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -92,71 +71,43 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\frmMain.cs",
-              "RelativeDocumentMoniker": "CanteenManagementSystem\\frmMain.cs",
-              "ToolTip": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\frmMain.cs [Design]",
-              "RelativeToolTip": "CanteenManagementSystem\\frmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-08T03:10:37.854Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmMain.cs",
-              "DocumentMoniker": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\frmMain.cs",
-              "RelativeDocumentMoniker": "CanteenManagementSystem\\frmMain.cs",
-              "ToolTip": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\frmMain.cs",
-              "RelativeToolTip": "CanteenManagementSystem\\frmMain.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "frmHome.Designer.cs",
+              "DocumentMoniker": "E:\\canteen_management_system\\CanteenManagementSystem\\frmHome.Designer.cs",
+              "RelativeDocumentMoniker": "CanteenManagementSystem\\frmHome.Designer.cs",
+              "ToolTip": "E:\\canteen_management_system\\CanteenManagementSystem\\frmHome.Designer.cs",
+              "RelativeToolTip": "CanteenManagementSystem\\frmHome.Designer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T03:31:58.535Z"
+              "WhenOpened": "2024-06-10T09:13:36.909Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmMain.Designer.cs",
-              "DocumentMoniker": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\frmMain.Designer.cs",
-              "RelativeDocumentMoniker": "CanteenManagementSystem\\frmMain.Designer.cs",
-              "ToolTip": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\frmMain.Designer.cs",
-              "RelativeToolTip": "CanteenManagementSystem\\frmMain.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGkBAAA7AAAA",
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "E:\\canteen_management_system\\CanteenManagementSystem\\frmMain.cs",
+              "RelativeDocumentMoniker": "CanteenManagementSystem\\frmMain.cs",
+              "ToolTip": "E:\\canteen_management_system\\CanteenManagementSystem\\frmMain.cs",
+              "RelativeToolTip": "CanteenManagementSystem\\frmMain.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAewBsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T07:50:38.81Z",
+              "WhenOpened": "2024-06-10T03:31:58.535Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LoginForm.cs",
-              "DocumentMoniker": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\LoginForm.cs",
-              "RelativeDocumentMoniker": "CanteenManagementSystem\\LoginForm.cs",
-              "ToolTip": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\LoginForm.cs",
-              "RelativeToolTip": "CanteenManagementSystem\\LoginForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADgAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "frmHome.cs [Design]",
+              "DocumentMoniker": "E:\\canteen_management_system\\CanteenManagementSystem\\frmHome.cs",
+              "RelativeDocumentMoniker": "CanteenManagementSystem\\frmHome.cs",
+              "ToolTip": "E:\\canteen_management_system\\CanteenManagementSystem\\frmHome.cs [Design]",
+              "RelativeToolTip": "CanteenManagementSystem\\frmHome.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-10T02:55:06.97Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginForm.cs [Design]",
-              "DocumentMoniker": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\LoginForm.cs",
-              "RelativeDocumentMoniker": "CanteenManagementSystem\\LoginForm.cs",
-              "ToolTip": "D:\\C# Projects\\CanteenManagementSystem\\CanteenManagementSystem\\LoginForm.cs [Design]",
-              "RelativeToolTip": "CanteenManagementSystem\\LoginForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-01T04:49:04.168Z"
+              "WhenOpened": "2024-06-10T09:01:54.794Z"
             }
           ]
         }

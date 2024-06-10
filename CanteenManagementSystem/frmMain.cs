@@ -17,9 +17,13 @@ namespace CanteenManagementSystem
             InitializeComponent();
         }
 
-        public static void AddControls(Form form)
+        public void AddControls(Form form)
         {
-            
+            CenterPanel.Controls.Clear();
+            form.Dock = DockStyle.Fill;
+            form.TopLevel = false;
+            CenterPanel.Controls.Add(form);
+            form.Show();
 
         }
 
@@ -55,7 +59,7 @@ namespace CanteenManagementSystem
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-
+            AddControls(new frmHome());
         }
 
         private void gunaButton2_Click(object sender, EventArgs e)
