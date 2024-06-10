@@ -42,6 +42,7 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.CenterPanel = new Guna.UI.WinForms.GunaPanel();
             this.navigationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyLogo)).BeginInit();
             this.gunaPanel2.SuspendLayout();
@@ -82,7 +83,7 @@
             this.settingsButton.ImageOffsetX = 5;
             this.settingsButton.ImageSize = new System.Drawing.Size(20, 20);
             this.settingsButton.Location = new System.Drawing.Point(6, 741);
-            this.settingsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.settingsButton.Margin = new System.Windows.Forms.Padding(4);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.settingsButton.OnHoverBorderColor = System.Drawing.Color.White;
@@ -111,7 +112,7 @@
             this.kitchenButton.ImageOffsetX = 5;
             this.kitchenButton.ImageSize = new System.Drawing.Size(20, 20);
             this.kitchenButton.Location = new System.Drawing.Point(6, 689);
-            this.kitchenButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.kitchenButton.Margin = new System.Windows.Forms.Padding(4);
             this.kitchenButton.Name = "kitchenButton";
             this.kitchenButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.kitchenButton.OnHoverBorderColor = System.Drawing.Color.White;
@@ -140,7 +141,7 @@
             this.posButton.ImageOffsetX = 5;
             this.posButton.ImageSize = new System.Drawing.Size(20, 20);
             this.posButton.Location = new System.Drawing.Point(6, 636);
-            this.posButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.posButton.Margin = new System.Windows.Forms.Padding(4);
             this.posButton.Name = "posButton";
             this.posButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.posButton.OnHoverBorderColor = System.Drawing.Color.White;
@@ -169,7 +170,7 @@
             this.staffButton.ImageOffsetX = 5;
             this.staffButton.ImageSize = new System.Drawing.Size(20, 20);
             this.staffButton.Location = new System.Drawing.Point(6, 584);
-            this.staffButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.staffButton.Margin = new System.Windows.Forms.Padding(4);
             this.staffButton.Name = "staffButton";
             this.staffButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.staffButton.OnHoverBorderColor = System.Drawing.Color.White;
@@ -199,7 +200,7 @@
             this.productsButton.ImageOffsetX = 5;
             this.productsButton.ImageSize = new System.Drawing.Size(20, 20);
             this.productsButton.Location = new System.Drawing.Point(6, 531);
-            this.productsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.productsButton.Margin = new System.Windows.Forms.Padding(4);
             this.productsButton.Name = "productsButton";
             this.productsButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.productsButton.OnHoverBorderColor = System.Drawing.Color.White;
@@ -229,7 +230,7 @@
             this.categoryButton.ImageOffsetX = 5;
             this.categoryButton.ImageSize = new System.Drawing.Size(20, 20);
             this.categoryButton.Location = new System.Drawing.Point(6, 479);
-            this.categoryButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.categoryButton.Margin = new System.Windows.Forms.Padding(4);
             this.categoryButton.Name = "categoryButton";
             this.categoryButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.categoryButton.OnHoverBorderColor = System.Drawing.Color.White;
@@ -258,7 +259,7 @@
             this.homeButton.ImageOffsetX = 5;
             this.homeButton.ImageSize = new System.Drawing.Size(20, 20);
             this.homeButton.Location = new System.Drawing.Point(6, 426);
-            this.homeButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homeButton.Margin = new System.Windows.Forms.Padding(4);
             this.homeButton.Name = "homeButton";
             this.homeButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.homeButton.OnHoverBorderColor = System.Drawing.Color.White;
@@ -304,7 +305,7 @@
             // 
             this.exitButton.BackColor = System.Drawing.Color.IndianRed;
             this.exitButton.Location = new System.Drawing.Point(1545, 15);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(50, 50);
             this.exitButton.TabIndex = 2;
@@ -319,9 +320,9 @@
             this.gunaPanel2.Controls.Add(this.exitButton);
             this.gunaPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.gunaPanel2.Location = new System.Drawing.Point(296, 0);
-            this.gunaPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(1642, 164);
+            this.gunaPanel2.Size = new System.Drawing.Size(1628, 164);
             this.gunaPanel2.TabIndex = 3;
             // 
             // label2
@@ -333,12 +334,22 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
+            // CenterPanel
+            // 
+            this.CenterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CenterPanel.Location = new System.Drawing.Point(296, 164);
+            this.CenterPanel.Name = "CenterPanel";
+            this.CenterPanel.Size = new System.Drawing.Size(1628, 796);
+            this.CenterPanel.TabIndex = 4;
+            this.CenterPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.centerPanel_Paint);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1938, 960);
+            this.ClientSize = new System.Drawing.Size(1924, 960);
+            this.Controls.Add(this.CenterPanel);
             this.Controls.Add(this.gunaPanel2);
             this.Controls.Add(this.navigationPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -371,5 +382,6 @@
         private System.Windows.Forms.Button exitButton;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private System.Windows.Forms.Label label2;
+        private Guna.UI.WinForms.GunaPanel CenterPanel;
     }
 }
