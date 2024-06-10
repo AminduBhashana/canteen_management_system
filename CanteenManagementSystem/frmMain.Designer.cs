@@ -42,6 +42,7 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.TopPanel = new Guna.UI.WinForms.GunaPanel();
             this.label2 = new System.Windows.Forms.Label();
+            this.CenterPanel = new Guna.UI.WinForms.GunaPanel();
             this.navigationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyLogo)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -321,7 +322,7 @@
             this.TopPanel.Location = new System.Drawing.Point(296, 0);
             this.TopPanel.Margin = new System.Windows.Forms.Padding(4);
             this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1642, 126);
+            this.TopPanel.Size = new System.Drawing.Size(1628, 126);
             this.TopPanel.TabIndex = 3;
             this.TopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TopPanel_Paint);
             // 
@@ -334,12 +335,21 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
+            // CenterPanel
+            // 
+            this.CenterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CenterPanel.Location = new System.Drawing.Point(296, 126);
+            this.CenterPanel.Name = "CenterPanel";
+            this.CenterPanel.Size = new System.Drawing.Size(1628, 834);
+            this.CenterPanel.TabIndex = 4;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1938, 960);
+            this.ClientSize = new System.Drawing.Size(1924, 960);
+            this.Controls.Add(this.CenterPanel);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.navigationPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -372,5 +382,6 @@
         private System.Windows.Forms.Button exitButton;
         private Guna.UI.WinForms.GunaPanel TopPanel;
         private System.Windows.Forms.Label label2;
+        private Guna.UI.WinForms.GunaPanel CenterPanel;
     }
 }
