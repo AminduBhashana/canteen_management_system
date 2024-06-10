@@ -84,8 +84,4 @@ C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\D
 C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.pdb
 C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\bin\Debug\Guna.UI.dll
 C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.frmMain.resources
-<<<<<<< HEAD
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.frmMain.resources
-=======
-C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.frmHome.resources
->>>>>>> frmMain

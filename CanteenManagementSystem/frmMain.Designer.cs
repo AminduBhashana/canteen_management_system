@@ -42,7 +42,6 @@
             this.exitButton = new System.Windows.Forms.Button();
             this.TopPanel = new Guna.UI.WinForms.GunaPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.CenterPanel = new Guna.UI.WinForms.GunaPanel();
             this.navigationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FacultyLogo)).BeginInit();
             this.TopPanel.SuspendLayout();
@@ -315,7 +314,6 @@
             // 
             // TopPanel
             // 
-<<<<<<< HEAD
             this.TopPanel.BackColor = System.Drawing.Color.Silver;
             this.TopPanel.Controls.Add(this.label2);
             this.TopPanel.Controls.Add(this.exitButton);
@@ -326,17 +324,6 @@
             this.TopPanel.Size = new System.Drawing.Size(1642, 126);
             this.TopPanel.TabIndex = 3;
             this.TopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TopPanel_Paint);
-=======
-            this.gunaPanel2.BackColor = System.Drawing.Color.Silver;
-            this.gunaPanel2.Controls.Add(this.label2);
-            this.gunaPanel2.Controls.Add(this.exitButton);
-            this.gunaPanel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaPanel2.Location = new System.Drawing.Point(296, 0);
-            this.gunaPanel2.Margin = new System.Windows.Forms.Padding(4);
-            this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(1628, 164);
-            this.gunaPanel2.TabIndex = 3;
->>>>>>> frmMain
             // 
             // label2
             // 
@@ -347,28 +334,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
-            // CenterPanel
-            // 
-            this.CenterPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CenterPanel.Location = new System.Drawing.Point(296, 164);
-            this.CenterPanel.Name = "CenterPanel";
-            this.CenterPanel.Size = new System.Drawing.Size(1628, 796);
-            this.CenterPanel.TabIndex = 4;
-            this.CenterPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.centerPanel_Paint);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1938, 960);
             this.Controls.Add(this.TopPanel);
-=======
-            this.ClientSize = new System.Drawing.Size(1924, 960);
-            this.Controls.Add(this.CenterPanel);
-            this.Controls.Add(this.gunaPanel2);
->>>>>>> frmMain
             this.Controls.Add(this.navigationPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -400,6 +372,5 @@
         private System.Windows.Forms.Button exitButton;
         private Guna.UI.WinForms.GunaPanel TopPanel;
         private System.Windows.Forms.Label label2;
-        private Guna.UI.WinForms.GunaPanel CenterPanel;
     }
 }
