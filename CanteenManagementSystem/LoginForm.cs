@@ -45,33 +45,25 @@ namespace CanteenManagementSystem
             string username = textUser.Text;
             string password = textPass.Text;
 
-            string connString = "server=localhost;uid=root;pwd=1234;database=canteen_management_system";
-
-            using (MySqlConnection connection = new MySqlConnection(connString))
+            if (MainClass.IsValidUser(username,password) == false)
             {
-                connection.Open();
-
-                string query = "SELECT COUNT(*) FROM users WHERE username = @username AND upass = @password";
-
-                using (MySqlCommand command = new MySqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@password", password);
-
-                    int count = Convert.ToInt32(command.ExecuteScalar());
-
-                    if (count > 0)
-                    {
-                        MessageBox.Show("Login Successful!");
-                        Console.WriteLine("success");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid username or password. Please try again.");
-                        Console.WriteLine("Fail");
-                    }
-                }
+                MessageBox.Show("Invalid username or password. Please try again.");
+                Console.WriteLine("login Failed");
             }
+            else
+            {
+                MessageBox.Show("Login Successful!");
+                Console.WriteLine("Login success");
+              
+                frmMain mainForm = new frmMain();
+                mainForm.Show();
+                this.Hide(); 
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
     

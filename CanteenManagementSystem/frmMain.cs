@@ -17,6 +17,12 @@ namespace CanteenManagementSystem
             InitializeComponent();
         }
 
+        public static void AddControls(Form form)
+        {
+            
+
+        }
+
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -34,7 +40,7 @@ namespace CanteenManagementSystem
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            label2.Text = MainClass.USER;
         }
 
         private void FacultyLogo_Click(object sender, EventArgs e)
@@ -65,6 +71,11 @@ namespace CanteenManagementSystem
         private void button1_Click(object sender, EventArgs e)
         {
            Application.Exit();
+        }
+
+        private void TopPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
