@@ -44,13 +44,13 @@ namespace CanteenManagementSystem
         {
             string username = textUser.Text;
             string password = textPass.Text;
-
+/*
             if (MainClass.IsValidUser(username,password) == false)
             {
                 MessageBox.Show("Invalid username or password. Please try again.");
                 Console.WriteLine("login Failed");
             }
-            else
+            else*/
             {
                 MessageBox.Show("Login Successful!");
                 Console.WriteLine("Login success");
