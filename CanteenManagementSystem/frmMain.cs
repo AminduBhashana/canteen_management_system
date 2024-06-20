@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CanteenManagementSystem.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,15 @@ namespace CanteenManagementSystem
             InitializeComponent();
         }
 
+        //for accessing frm main
+        static frmMain _obj;
+
+        public static frmMain Instance
+        {
+            get { if (_obj == null) { _obj = new frmMain(); } return _obj; }
+        }
+
+
         public void AddControls(Form form)
         {
             CenterPanel.Controls.Clear();
@@ -25,36 +35,18 @@ namespace CanteenManagementSystem
             CenterPanel.Controls.Add(form);
             form.Show();
 
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        }  
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+           
         }
 
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
             label2.Text = MainClass.USER;
-        }
-
-        private void FacultyLogo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            _obj = this;
         }
 
         private void homeButton_Click(object sender, EventArgs e)
@@ -62,24 +54,36 @@ namespace CanteenManagementSystem
             AddControls(new frmHome());
         }
 
-        private void gunaButton2_Click(object sender, EventArgs e)
-        {
+       
 
+        private void exitButton_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
-        private void gunaButton1_Click(object sender, EventArgs e)
+        private void categoryButton_Click(object sender, EventArgs e)
         {
-
+            AddControls(new frmCategoryView());
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void productsButton_Click(object sender, EventArgs e)
         {
-           Application.Exit();
+            AddControls(new frmProductView());
         }
 
-        private void TopPanel_Paint(object sender, PaintEventArgs e)
-        {
+        /* 
 
-        }
+         private void tablesButton_Click(object sender, EventArgs e)
+         {
+             AddControls(new frmTableView());
+         }
+
+         private void staffButton_Click(object sender, EventArgs e)
+         {
+             AddControls(new frmStaffView());
+         }
+
+        */
+
     }
 }
