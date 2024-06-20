@@ -9,6 +9,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace CanteenManagementSystem
 {
@@ -44,20 +45,21 @@ namespace CanteenManagementSystem
         {
             string username = textUser.Text;
             string password = textPass.Text;
-/*
-            if (MainClass.IsValidUser(username,password) == false)
+
+            /*  if (MainClass.IsValidUser(username, password) == false)
+              {
+                  MessageBox.Show("Invalid username or password. Please try again.");
+                  Console.WriteLine("login Failed");
+              }
+              else*/          
             {
-                MessageBox.Show("Invalid username or password. Please try again.");
-                Console.WriteLine("login Failed");
-            }
-            else*/
-            {
+
                 MessageBox.Show("Login Successful!");
                 Console.WriteLine("Login success");
-              
+
                 frmMain mainForm = new frmMain();
                 mainForm.Show();
-                this.Hide(); 
+                this.Hide();
             }
         }
 

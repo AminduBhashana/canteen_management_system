@@ -183,3 +183,7 @@ E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\Ca
 E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmCategoryAdd.resources
 E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmProductAdd.resources
 E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmProductView.resources
+E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmStaffAdd.resources
+E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmTableAdd.resources
+E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmStaffView.resources
+E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmTableView.resources
