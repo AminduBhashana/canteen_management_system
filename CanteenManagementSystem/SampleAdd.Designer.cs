@@ -86,6 +86,7 @@
             // closeButton
             // 
             this.closeButton.BackColor = System.Drawing.Color.Gray;
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeButton.FlatAppearance.BorderSize = 0;
             this.closeButton.ForeColor = System.Drawing.Color.White;
             this.closeButton.Location = new System.Drawing.Point(164, 12);
@@ -99,6 +100,7 @@
             // saveButton
             // 
             this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
+            this.saveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveButton.FlatAppearance.BorderSize = 0;
             this.saveButton.ForeColor = System.Drawing.Color.White;
             this.saveButton.Location = new System.Drawing.Point(47, 12);

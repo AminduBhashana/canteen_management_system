@@ -190,6 +190,7 @@
             this.staffButton.Text = "Staff";
             this.staffButton.TextOffsetX = 25;
             this.staffButton.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.staffButton.Click += new System.EventHandler(this.staffButton_Click);
             // 
             // tablesButton
             // 
@@ -220,6 +221,7 @@
             this.tablesButton.Text = "Tables";
             this.tablesButton.TextOffsetX = 25;
             this.tablesButton.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.tablesButton.Click += new System.EventHandler(this.tablesButton_Click);
             // 
             // productsButton
             // 
@@ -361,7 +363,7 @@
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1352, 3);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1369, 3);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(60, 38);
             this.guna2ControlBox3.TabIndex = 0;
@@ -372,7 +374,7 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1418, 3);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1435, 3);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(60, 38);
             this.guna2ControlBox2.TabIndex = 0;
@@ -384,7 +386,7 @@
             this.exitButton.HoverState.BorderColor = System.Drawing.Color.White;
             this.exitButton.HoverState.FillColor = System.Drawing.Color.Red;
             this.exitButton.IconColor = System.Drawing.Color.White;
-            this.exitButton.Location = new System.Drawing.Point(1484, 3);
+            this.exitButton.Location = new System.Drawing.Point(1501, 3);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(60, 38);
             this.exitButton.TabIndex = 0;

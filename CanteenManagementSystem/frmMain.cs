@@ -71,19 +71,14 @@ namespace CanteenManagementSystem
             AddControls(new frmProductView());
         }
 
-        /* 
+        private void staffButton_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmStaffView());
+        }
 
-         private void tablesButton_Click(object sender, EventArgs e)
-         {
-             AddControls(new frmTableView());
-         }
-
-         private void staffButton_Click(object sender, EventArgs e)
-         {
-             AddControls(new frmStaffView());
-         }
-
-        */
-
+        private void tablesButton_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmTableView());
+        }
     }
 }
