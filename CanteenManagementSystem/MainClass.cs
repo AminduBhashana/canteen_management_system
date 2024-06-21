@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Collections;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace CanteenManagementSystem
 {
@@ -19,32 +20,38 @@ namespace CanteenManagementSystem
         public static SqlConnection con = new SqlConnection(con_string);
 
 
-        //Method to check user validation
-
-        public static bool IsValidUser(string user, string pass)
+        public static bool IsValidUser(string username, string password)
         {
             bool isValid = false;
 
-            string qry = @"Select * from users where username ='" + user + "' and upass ='" + pass + "'";
-            SqlCommand cmd = new SqlCommand(qry, con);
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
+            string connString = "server=localhost;uid=root;pwd=1234;database=canteen_management_system";
 
-            if (dt.Rows.Count > 0)
+            using (MySqlConnection connection = new MySqlConnection(connString))
             {
-                isValid = true;
-                USER = dt.Rows[0]["uName"].ToString();
-            }
+                connection.Open();
 
+                string query = "SELECT * FROM users WHERE username = @username AND upass = @password";
+
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", password);
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {                  
+                            USER = reader["username"].ToString(); 
+                            isValid = true;
+                        }
+                    }
+                }
+            }
             return isValid;
         }
 
-
         public static string user;
-        //private static SqlConnection con;
-        //private static int res;
-
+      
         public static string USER
         {
             get { return user; }
@@ -53,62 +60,72 @@ namespace CanteenManagementSystem
 
         //Method for crud operation sql
 
-        public static int SQl(string qry, Hashtable ht)
+        public static int SQl(string qry, Hashtable parameters)
         {
-            int res = 0;
+            int rowsAffected = 0;
 
-            try
+            string connString = "server=localhost;uid=root;pwd=1234;database=canteen_management_system";
+
+            using (MySqlConnection connection = new MySqlConnection(connString))
             {
-                SqlCommand cmd = new SqlCommand(qry, con);
-                cmd.CommandType = CommandType.Text;
+                connection.Open();
 
-                foreach (DictionaryEntry item in ht)
+                using (MySqlCommand command = new MySqlCommand(qry, connection))
                 {
-                    cmd.Parameters.AddWithValue(item.Key.ToString(), item.Value);
+                    foreach (DictionaryEntry parameter in parameters)
+                    {
+                        command.Parameters.AddWithValue((string)parameter.Key, parameter.Value);
+                    }
+
+                    rowsAffected = command.ExecuteNonQuery();
                 }
-                if (con.State == ConnectionState.Closed) { con.Open(); }
-                res = cmd.ExecuteNonQuery();
-                if (con.State == ConnectionState.Open) { con.Close(); }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-                con.Close();
             }
 
-            return res;
+            return rowsAffected;
         }
 
 
         //For Loading data from database
 
 
-        public static void LoadData(string qry, DataGridView gv, ListBox lb)
+        public static void LoadData(string qry, DataGridView gv, ListBox lb, Hashtable parameters)
         {
-            // Serial no in gridview
-
             gv.CellFormatting += new DataGridViewCellFormattingEventHandler(gv_CellFormatting);
+
+            string connString = "server=localhost;uid=root;pwd=1234;database=canteen_management_system";
+
             try
             {
-                SqlCommand cmd = new SqlCommand(qry, con);
-                cmd.CommandType = CommandType.Text;
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                for (int i = 0; i < lb.Items.Count; i++)
+                using (MySqlConnection con = new MySqlConnection(connString))
                 {
-                    string colNam1 = ((DataGridViewColumn)lb.Items[i]).Name;
-                    gv.Columns[colNam1].DataPropertyName = dt.Columns[i].ToString();
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(qry, con))
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        foreach (DictionaryEntry parameter in parameters)
+                        {
+                            cmd.Parameters.AddWithValue((string)parameter.Key, parameter.Value);
+                        }
 
+                        using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                        {
+                            DataTable dt = new DataTable();
+                            da.Fill(dt);
+
+                            for (int i = 0; i < lb.Items.Count; i++)
+                            {
+                                string colName = ((DataGridViewColumn)lb.Items[i]).Name;
+                                gv.Columns[colName].DataPropertyName = dt.Columns[i].ToString();
+                            }
+
+                            gv.DataSource = dt;
+                        }
+                    }
                 }
-
-                gv.DataSource = dt;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
-                con.Close();
             }
         }
 
@@ -163,33 +180,3 @@ namespace CanteenManagementSystem
 }
 
 
-/* public static bool IsValidUser(string username, string password)
-        {
-            bool isValid = false;
-
-            string connString = "server=localhost;uid=root;pwd=1234;database=canteen_management_system";
-
-            using (MySqlConnection connection = new MySqlConnection(connString))
-            {
-                connection.Open();
-
-                string query = "SELECT * FROM users WHERE username = @username AND upass = @password";
-
-                using (MySqlCommand command = new MySqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@password", password);
-
-                    using (MySqlDataReader reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            USER = reader["username"].ToString();
-                            isValid = true;
-                        }
-                    }
-                }
-            }
-            return isValid;
-
-        }*/

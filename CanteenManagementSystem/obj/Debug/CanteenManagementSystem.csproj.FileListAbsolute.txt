@@ -187,3 +187,18 @@ E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\Ca
 E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmTableAdd.resources
 E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmStaffView.resources
 E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmTableView.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\bin\Debug\Guna.Charts.WinForms.dll
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\bin\Debug\Guna.UI2.dll
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\bin\Debug\Guna.Charts.WinForms.xml
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\bin\Debug\System.Configuration.ConfigurationManager.xml
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.frmHome.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmCategoryAdd.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmProductAdd.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmStaffAdd.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmTableAdd.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.SampleAdd.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.SampleView.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmCategoryView.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmProductView.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmStaffView.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmTableView.resources

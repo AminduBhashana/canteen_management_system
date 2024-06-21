@@ -23,17 +23,15 @@ namespace CanteenManagementSystem.Model
 
         public override void saveButton_Click(object sender, EventArgs e)
         {
-
             string qry = "";
 
-            if (id == 0) //insert
+            if (id == 0) 
             {
-                qry = "insert into category values(@Name)";
+                qry = "INSERT INTO category (catName) VALUES (@Name)";
             }
-            else //update
+            else 
             {
-                qry = "update category Set catName = @Name where catID = @id";
-
+                qry = "UPDATE category SET catName = @Name WHERE catID = @id";
             }
 
             Hashtable ht = new Hashtable();
@@ -42,10 +40,14 @@ namespace CanteenManagementSystem.Model
 
             if (MainClass.SQl(qry, ht) > 0)
             {
-                guna2MessageDialog1.Show("Saved successfully..");
+                guna2MessageDialog1.Show("Saved successfully.");
                 id = 0;
                 nameText.Text = "";
                 nameText.Focus();
+            }
+            else
+            {
+                guna2MessageDialog1.Show("Error saving data.");
             }
         }
     }

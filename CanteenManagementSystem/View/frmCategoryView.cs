@@ -22,13 +22,16 @@ namespace CanteenManagementSystem.View
 
          public void GetData()
          {
-            /* string qry = "Select * From where catName like '%" + searchText.Text + "%'";
+            string qry = "SELECT * FROM category WHERE catName LIKE @searchText";
             ListBox lb = new ListBox();
             lb.Items.Add(dgvid);
             lb.Items.Add(dgvName);
 
-            MainClass.LoadData(qry, guna2DataGridView1, lb);*/
-         }
+            Hashtable parameters = new Hashtable();
+            parameters.Add("@searchText", "%" + searchText.Text + "%");
+
+            MainClass.LoadData(qry, guna2DataGridView1, lb, parameters);
+        }
 
          private void frmCategoryView_Load(object sender, EventArgs e)
          {
@@ -38,8 +41,8 @@ namespace CanteenManagementSystem.View
         public override void addButton_Click(object sender, EventArgs e)
         {
             MainClass.BlurBackground(new frmCategoryAdd());
-            /* frmCategoryAdd frm = new frmCategoryAdd();
-                frm.ShowDialog();*/
+            frmCategoryAdd frm = new frmCategoryAdd();
+            frm.ShowDialog();
             GetData();
         }
 
