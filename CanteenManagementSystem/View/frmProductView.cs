@@ -17,6 +17,7 @@ namespace CanteenManagementSystem.View
         public frmProductView()
         {
             InitializeComponent();
+            GetData();
         }
 
         private void frmProductView_Load(object sender, EventArgs e)
@@ -25,7 +26,11 @@ namespace CanteenManagementSystem.View
         }
         private void GetData()
         {
-           /* string qry = "Select pID, pName, pPrice, CategoryID, c.catName from products p inner join category c on c.catID = p.CategoryId where pName like '%" + searchText.Text + "%'";
+            string qry = "Select productId, productName, productPrice, categoryId, c.catName from products p inner join category c on c.catId = p.categoryId where productName like @searchText";
+
+            Hashtable parameters = new Hashtable();
+            parameters.Add("@searchText", "%" + searchText.Text + "%");
+
             ListBox lb = new ListBox();
             lb.Items.Add(dgvid);
             lb.Items.Add(dgvName);
@@ -33,9 +38,9 @@ namespace CanteenManagementSystem.View
             lb.Items.Add(dgvcatID);
             lb.Items.Add(dgvcat);
 
-
-            MainClass.LoadData(qry, guna2DataGridView1, lb);*/
+            MainClass.LoadData(qry, guna2DataGridView1, lb, parameters);
         }
+
 
         public override void addButton_Click(object sender, EventArgs e)
         {
@@ -74,7 +79,7 @@ namespace CanteenManagementSystem.View
                 if (guna2MessageDialog1.Show("Are you sure you want to delete?") == DialogResult.Yes)
                 {
                     int id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
-                    string qry = "Delete from products where pID = " + id + "";
+                    string qry = "Delete from products where productId = " + id + "";
                     Hashtable ht = new Hashtable();
                     MainClass.SQl(qry, ht);
 

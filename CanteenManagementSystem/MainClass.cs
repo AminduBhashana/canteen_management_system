@@ -164,16 +164,26 @@ namespace CanteenManagementSystem
 
         public static void CBFill(string qry, ComboBox cb)
         {
-            SqlCommand cmd = new SqlCommand(qry, con);
-            cmd.CommandType = CommandType.Text;
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            // da.Fill(dt);
+            string connString = "server=localhost;uid=root;pwd=1234;database=canteen_management_system";
 
-            cb.DisplayMember = "name";
-            cb.ValueMember = "id";
-            cb.DataSource = dt;
-            cb.SelectedIndex = -1;
+            using (MySqlConnection connection = new MySqlConnection(connString))
+            {
+                connection.Open();
+                using (MySqlCommand cmd = new MySqlCommand(qry, connection))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+
+                        cb.DisplayMember = "name";
+                        cb.ValueMember = "id";
+                        cb.DataSource = dt;
+                        cb.SelectedIndex = -1;
+                    }
+                }
+            }
         }
     }
 }
