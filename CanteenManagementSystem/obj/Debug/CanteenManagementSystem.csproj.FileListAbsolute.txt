@@ -195,10 +195,8 @@ D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\Canteen
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmCategoryAdd.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmProductAdd.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmStaffAdd.resources
-D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmTableAdd.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.SampleAdd.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.SampleView.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmCategoryView.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmProductView.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmStaffView.resources
-D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmTableView.resources

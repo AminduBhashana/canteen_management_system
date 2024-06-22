@@ -78,7 +78,7 @@ namespace CanteenManagementSystem
 
         private void tablesButton_Click(object sender, EventArgs e)
         {
-            AddControls(new frmTableView());
+            
         }
     }
 }

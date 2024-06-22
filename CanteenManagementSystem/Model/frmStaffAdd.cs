@@ -29,27 +29,24 @@ namespace CanteenManagementSystem.Model
         {
             string qry = "";
 
-            if (id == 0) //insert
+            if (id == 0) // Insert
             {
-                qry = "Insert into Staff values (@Name, @phone, @role)";
+                qry = "INSERT INTO staff (sName, sPhone, sRole) VALUES (@Name, @Phone, @Role)";
             }
-            else //update
+            else // Update
             {
-                qry = "Update Staff Set sName = @Name, sPhone = @phone, sRole = @role where staffID = @id";
-
+                qry = "UPDATE staff SET sName = @Name, sPhone = @Phone, sRole = @Role WHERE staffId = @Id";
             }
 
             Hashtable ht = new Hashtable();
-            ht.Add("@id", id);
+            ht.Add("@Id", id);
             ht.Add("@Name", txtName.Text);
-            ht.Add("@phone", txtPhone.Text);
-            ht.Add("@role", cbRole.Text);
-
-
+            ht.Add("@Phone", txtPhone.Text);
+            ht.Add("@Role", cbRole.Text);
 
             if (MainClass.SQl(qry, ht) > 0)
             {
-                guna2MessageDialog1.Show("Saved successfully..");
+                guna2MessageDialog1.Show("Saved successfully.");
                 id = 0;
                 txtName.Text = "";
                 txtPhone.Text = "";
@@ -58,4 +55,4 @@ namespace CanteenManagementSystem.Model
             }
         }
     }
-}
+    }

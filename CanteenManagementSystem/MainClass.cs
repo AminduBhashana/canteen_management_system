@@ -87,7 +87,6 @@ namespace CanteenManagementSystem
 
         //For Loading data from database
 
-
         public static void LoadData(string qry, DataGridView gv, ListBox lb, Hashtable parameters)
         {
             gv.CellFormatting += new DataGridViewCellFormattingEventHandler(gv_CellFormatting);

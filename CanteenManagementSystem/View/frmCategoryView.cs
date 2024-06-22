@@ -18,6 +18,7 @@ namespace CanteenManagementSystem.View
         public frmCategoryView()
         {
             InitializeComponent();
+            GetData();
         }
 
          public void GetData()
