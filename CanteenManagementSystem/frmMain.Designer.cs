@@ -130,6 +130,7 @@
             this.kitchenButton.Text = "Kitchen";
             this.kitchenButton.TextOffsetX = 25;
             this.kitchenButton.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.kitchenButton.Click += new System.EventHandler(this.kitchenButton_Click);
             // 
             // posButton
             // 
