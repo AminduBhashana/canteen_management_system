@@ -1,4 +1,5 @@
-﻿using CanteenManagementSystem.View;
+﻿using CanteenManagementSystem.Model;
+using CanteenManagementSystem.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -79,6 +80,12 @@ namespace CanteenManagementSystem
         private void tablesButton_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void posButton_Click(object sender, EventArgs e)
+        {
+            frmPOS frm = new frmPOS();
+            frm.Show();
         }
     }
 }

@@ -200,3 +200,18 @@ D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\Canteen
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmCategoryView.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmProductView.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmStaffView.resources
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\bin\Debug\Guna.Charts.WinForms.dll
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\bin\Debug\Guna.UI2.dll
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\bin\Debug\Guna.Charts.WinForms.xml
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.frmHome.resources
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmCategoryAdd.resources
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmPOS.resources
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmProductAdd.resources
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmStaffAdd.resources
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.SampleAdd.resources
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.SampleView.resources
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmCategoryView.resources
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmProductView.resources
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmStaffView.resources
+C:\Users\Chamath\Desktop\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.ucProduct.resources
