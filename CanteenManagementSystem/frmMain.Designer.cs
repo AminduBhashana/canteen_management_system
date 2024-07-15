@@ -160,6 +160,7 @@
             this.posButton.Text = "POS";
             this.posButton.TextOffsetX = 25;
             this.posButton.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.posButton.Click += new System.EventHandler(this.posButton_Click);
             // 
             // staffButton
             // 
