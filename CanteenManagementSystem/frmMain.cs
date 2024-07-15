@@ -87,5 +87,11 @@ namespace CanteenManagementSystem
             frmPOS frm = new frmPOS();
             frm.Show();
         }
+
+        private void kitchenButton_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmKitchenView());
+
+        }
     }
 }
