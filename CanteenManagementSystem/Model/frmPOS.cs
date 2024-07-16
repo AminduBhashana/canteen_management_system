@@ -18,6 +18,9 @@ namespace CanteenManagementSystem.Model
             InitializeComponent();
         }
 
+        public int MainID = 0;
+        public string OrderType = "";
+
         private void frmPOS_Load(object sender, EventArgs e)
         {
 
@@ -55,6 +58,7 @@ namespace CanteenManagementSystem.Model
             if (frm.MainID > 0)
             {
                 id = frm.MainID;
+                MainID = frm.MainID;
                 LoadEntries();
             }
         }
@@ -101,6 +105,20 @@ namespace CanteenManagementSystem.Model
             lb1waiter.Visible = false; 
             lb1Total.Text = "00";*/
 
+        }
+
+        private void btnTakeAway_Click(object sender, EventArgs e)
+        {
+            frmAddCustomer frm = new frmAddCustomer();
+            frm.mainID = MainID;
+            frm.orderType = OrderType;
+            MainClass.BlurBackground(frm);
+
+            if(frm.txtName.Text != "")
+            {
+
+            }
+            
         }
     }
 }
