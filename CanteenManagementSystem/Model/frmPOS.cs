@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,54 +23,84 @@ namespace CanteenManagementSystem.Model
 
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gunaLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TileButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TileButton3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TileButton4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TileButton5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2TileButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2PictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
-            this.Close();   
+            this.Close();
         }
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             guna2DataGridView1.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+
+
+        private void guna2DataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+        }
+        public int id = 0;
+        private void btnBillList_Click(object sender, EventArgs e)
+        {
+
+            frmBillList frm = new frmBillList();
+            MainClass.BlurBackground(frm);
+
+            if (frm.MainID > 0)
+            {
+                id = frm.MainID;
+                LoadEntries();
+            }
+        }
+
+        private void LoadEntries()
+        {
+            string qry = @"Select * from tblMain minner join tblDetails d on m.MainID= d.MainID inner join products p on p.pID= d.proID Where m.MainID = " + id + "";
+            SqlCommand cmd2 = new SqlCommand(qry, MainClass.con);
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+            da2.Fill(dt2);
+
+            guna2DataGridView1.Rows.Clear();
+
+            foreach (DataRow item in dt2.Rows)
+            {
+                string detailid = item["DetailID"].ToString(); 
+                string proid = item["proID"].ToString();
+                string proName = item["pName"].ToString();
+                string qty = item["qty"].ToString();
+                string price = item["price"].ToString();
+                string amount = item["amount"].ToString();
+
+                object[] obj = { 0, detailid, proid, qty, price, amount }; 
+                guna2DataGridView1.Rows.Add(obj);
+
+            }
+           // GetTotal();
+
+        }
+
+        private void btnCheckout_Click(object sender, EventArgs e)
+        {
+            frmCheckout frm = new frmCheckout();
+            frm.MainID = id;
+           // frm.amt = Convert.ToDouble(lb1Total.Text); 
+            MainClass.BlurBackground(frm);
+
+          /*  MainID = 0;
+            guna2DataGridView1.Rows.Clear();
+            lb1Table.Text = "";
+            lb1Waiter.Text = "";
+            lb1Table.Visible = false; 
+            lb1waiter.Visible = false; 
+            lb1Total.Text = "00";*/
+
         }
     }
 }
