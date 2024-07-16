@@ -218,3 +218,4 @@ E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\Ca
 E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmKitchenView.resources
 E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmBillList.resources
 E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmCheckout.resources
+E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmAddCustomer.resources
