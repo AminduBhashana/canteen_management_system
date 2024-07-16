@@ -77,10 +77,7 @@ namespace CanteenManagementSystem
             AddControls(new frmStaffView());
         }
 
-        private void tablesButton_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void posButton_Click(object sender, EventArgs e)
         {
