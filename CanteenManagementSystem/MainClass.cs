@@ -175,16 +175,17 @@ namespace CanteenManagementSystem
                     using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
                     {
                         DataTable dt = new DataTable();
-                        da.Fill(dt);
+                        da.Fill(dt);                   
 
                         cb.DisplayMember = "name";
                         cb.ValueMember = "id";
                         cb.DataSource = dt;
-                        cb.SelectedIndex = -1;
+                        cb.SelectedIndex = -1; // Ensure no item is selected by default
                     }
                 }
             }
         }
+
     }
 }
 

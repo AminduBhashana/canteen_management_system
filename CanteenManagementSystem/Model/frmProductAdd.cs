@@ -19,7 +19,8 @@ namespace CanteenManagementSystem.Model
     {
         public frmProductAdd()
         {
-            InitializeComponent();         
+            InitializeComponent();
+            this.Load += new System.EventHandler(this.frmProductAdd_Load);
         }
 
         public int id = 0;
@@ -27,16 +28,17 @@ namespace CanteenManagementSystem.Model
 
         private void frmProductAdd_Load(object sender, EventArgs e)
         {
-            //for cb fill
-            string qry = "Select catId 'id' , catName 'name' from category ";
-
+            // Fill the ComboBox with categories
+            string qry = "SELECT catId 'id' , catName 'name' FROM category";
             MainClass.CBFill(qry, cbCat);
 
-            if (cID > 0) //for update
+            // Select the correct category if editing
+            if (cID > 0)
             {
                 cbCat.SelectedValue = cID;
             }
 
+            // Load existing data if updating
             if (id > 0)
             {
                 ForUpdateLoadData();
@@ -49,7 +51,7 @@ namespace CanteenManagementSystem.Model
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Images(.jpg, .png)|* .png; *.jpg";
+            ofd.Filter = "Images(.jpg, .png)|*.png;*.jpg";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 filepath = ofd.FileName;
@@ -72,22 +74,30 @@ namespace CanteenManagementSystem.Model
 
             // Convert image to byte array
             Image temp = new Bitmap(txtImage.Image);
-            MemoryStream ms = new MemoryStream();
-            temp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-            byte[] imageByteArray = ms.ToArray();
+            using (MemoryStream ms = new MemoryStream())
+            {
+                temp.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                imageByteArray = ms.ToArray();
+            }
 
             Hashtable ht = new Hashtable();
             ht.Add("@Id", id);
             ht.Add("@Name", txtName.Text);
 
             // Convert and validate the price
-            if (decimal.TryParse(txtPrice.Text, out decimal price))
+            if (decimal.TryParse(txtPrice.Text.Trim(), out decimal price))
             {
                 ht.Add("@Price", price);
             }
             else
             {
-                MessageBox.Show("Please enter a valid price.");
+                Console.WriteLine("Please enter a valid price.");
+                return;
+            }
+
+            if (cbCat.SelectedValue == null)
+            {
+                MessageBox.Show("Please select a category.");
                 return;
             }
 
@@ -103,7 +113,6 @@ namespace CanteenManagementSystem.Model
                 cbCat.SelectedIndex = -1;
                 txtImage.Image = CanteenManagementSystem.Properties.Resources.products;
                 txtName.Focus();
-          
             }
         }
 
@@ -133,10 +142,13 @@ namespace CanteenManagementSystem.Model
                                 byte[] imageArray = (byte[])dt.Rows[0]["productImage"];
                                 txtImage.Image = Image.FromStream(new MemoryStream(imageArray));
                             }
+
+                            cID = Convert.ToInt32(dt.Rows[0]["categoryId"]);
+                            cbCat.SelectedValue = cID;
                         }
                     }
                 }
             }
         }
-}
+    }
 }

@@ -219,3 +219,9 @@ E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\Ca
 E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmBillList.resources
 E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmCheckout.resources
 E:\Academic Year 2 Sem 2\Visual Programming Project\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmAddCustomer.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmAddCustomer.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmBillList.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmCheckout.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmPOS.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.ucProduct.resources
+D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmKitchenView.resources

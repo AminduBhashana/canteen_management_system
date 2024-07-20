@@ -45,8 +45,6 @@ namespace CanteenManagementSystem.View
         public override void addButton_Click(object sender, EventArgs e)
         {
             MainClass.BlurBackground(new Model.frmProductAdd());
-            /* frmCategoryAdd frm = new frmCategoryAdd();
-              frm.ShowDialog();*/
             GetData();
         }
 
