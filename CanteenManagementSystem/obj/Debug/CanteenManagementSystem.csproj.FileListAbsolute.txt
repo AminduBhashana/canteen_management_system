@@ -225,3 +225,17 @@ D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\Canteen
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmPOS.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.ucProduct.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmKitchenView.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmAddCustomer.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmBillList.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmCategoryAdd.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmCheckout.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmPOS.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmProductAdd.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmStaffAdd.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.ucProduct.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.SampleAdd.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.SampleView.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmCategoryView.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmKitchenView.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmProductView.resources
+E:\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmStaffView.resources
