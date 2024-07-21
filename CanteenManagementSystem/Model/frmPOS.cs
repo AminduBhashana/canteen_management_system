@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,9 @@ namespace CanteenManagementSystem.Model
         {
             guna2DataGridView1.BorderStyle = BorderStyle.FixedSingle;
             AddCategory();
+
+            productPanel.Controls.Clear();
+            loadProducts();
         }
 
 
@@ -49,7 +53,14 @@ namespace CanteenManagementSystem.Model
 
         private void guna2DataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            int count = 0;
 
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                count++;
+                row.Cells[0].Value = count;
+
+            }
         }
         public int id = 0;
         private void btnBillList_Click(object sender, EventArgs e)
@@ -102,6 +113,36 @@ namespace CanteenManagementSystem.Model
 
         }
 
+        private void AddItems(string id, string name, string cat, string price,Image pImage) {
+            var w = new ucProduct()
+            {
+                pName = name,
+                pPrice = price,
+                pCategory = cat,
+                pImage = pImage,
+                id = Convert.ToInt32(id),
+            };
+
+            productPanel.Controls.Add(w);
+
+            w.onSelect += (ss, ee) =>
+            {
+                var wdg = (ucProduct)ss;
+
+                foreach (DataGridViewRow item in guna2DataGridView1.Rows)
+                {
+                    if (Convert.ToInt32(item.Cells["dgvid"].Value) == wdg.id)
+                    {
+                        item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1;
+                        item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString())* double.Parse(item.Cells["dgvPrice"].Value.ToString());
+                        return;
+                    }
+                    
+                }
+                guna2DataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.pName, 1, wdg.pPrice, wdg.pPrice });
+            };
+        }
+
         private void LoadEntries()
         {
             string qry = @"Select * from tblMain minner join tblDetails d on m.MainID= d.MainID inner join products p on p.pID= d.proID Where m.MainID = " + id + "";
@@ -129,6 +170,43 @@ namespace CanteenManagementSystem.Model
 
         }
 
+        private void loadProducts()
+        {
+            string qry = "SELECT * FROM products INNER JOIN category on catId = categoryId";
+            string connString = "server=localhost;uid=root;pwd=1234;database=canteen_management_system";
+
+            DataTable dt = new DataTable();
+
+            using (MySqlConnection connection = new MySqlConnection(connString))
+            {
+                connection.Open();
+                using (MySqlCommand cmd = new MySqlCommand(qry, connection))
+                {
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+
+            foreach (DataRow item in dt.Rows)
+            {
+                byte[] imagearray = (byte[])item["productImage"];
+                Image productImage = Image.FromStream(new MemoryStream(imagearray));
+
+                AddItems(
+                    item["productId"].ToString(),
+                    item["productName"].ToString(),
+                    item["catName"].ToString(),
+                    item["productPrice"].ToString(),
+                    productImage
+                );
+            }
+        }
+
+
+
+
         private void btnCheckout_Click(object sender, EventArgs e)
         {
             frmCheckout frm = new frmCheckout();
@@ -144,6 +222,12 @@ namespace CanteenManagementSystem.Model
             lb1waiter.Visible = false; 
             lb1Total.Text = "00";*/
 
+        }
+
+        private void getTotal()
+        {
+            double total = 0;
+            lbl
         }
 
         private void btnTakeAway_Click(object sender, EventArgs e)
