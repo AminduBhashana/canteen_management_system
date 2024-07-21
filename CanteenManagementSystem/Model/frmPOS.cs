@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,7 +25,8 @@ namespace CanteenManagementSystem.Model
 
         private void frmPOS_Load(object sender, EventArgs e)
         {
-
+            guna2DataGridView1.BorderStyle = BorderStyle.FixedSingle;
+            AddCategory();
         }
 
 
@@ -61,6 +64,42 @@ namespace CanteenManagementSystem.Model
                 MainID = frm.MainID;
                 LoadEntries();
             }
+        }
+
+        private void AddCategory()
+        {
+            string qry = "SELECT * FROM category";
+            Hashtable parameters = new Hashtable();
+
+            DataTable dt = new DataTable();
+
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;uid=root;pwd=1234;database=canteen_management_system"))
+            {
+                connection.Open();
+                using (MySqlCommand cmd = new MySqlCommand(qry, connection))
+                {
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+
+            categoryPanel.Controls.Clear();
+
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow row in dt.Rows)
+                {
+                    Guna.UI2.WinForms.Guna2Button b = new Guna.UI2.WinForms.Guna2Button();
+                    b.FillColor = Color.FromArgb(50, 55, 89);
+                    b.Size = new Size(197, 59);
+                    b.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+                    b.Text = row["catName"].ToString();
+                    categoryPanel.Controls.Add(b);  
+                }
+            }
+
         }
 
         private void LoadEntries()
@@ -119,6 +158,11 @@ namespace CanteenManagementSystem.Model
 
             }
             
+        }
+
+        private void categortBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
