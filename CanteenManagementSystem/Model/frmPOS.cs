@@ -107,10 +107,23 @@ namespace CanteenManagementSystem.Model
                     b.Size = new Size(197, 59);
                     b.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
                     b.Text = row["catName"].ToString();
+
+                    b.Click += new EventHandler(b_Click);
+
                     categoryPanel.Controls.Add(b);  
                 }
             }
 
+        }
+
+        private void b_Click(object sender, EventArgs e)
+        {
+            Guna.UI2.WinForms.Guna2Button b = (Guna.UI2.WinForms.Guna2Button)sender;
+            foreach (var item in productPanel.Controls)
+            {
+                var pro = (ucProduct)item;
+                pro.Visible = pro.pCategory.ToLower().Contains(b.Text.Trim().ToLower());
+            }
         }
 
         private void AddItems(string id, string name, string cat, string price,Image pImage) {
@@ -134,12 +147,14 @@ namespace CanteenManagementSystem.Model
                     if (Convert.ToInt32(item.Cells["dgvid"].Value) == wdg.id)
                     {
                         item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1;
-                        item.Cells["dgvAmount"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString())* double.Parse(item.Cells["dgvPrice"].Value.ToString());
+                        item.Cells["dgvAmount"].Value = (int.Parse(item.Cells["dgvQty"].Value.ToString()) * double.Parse(item.Cells["dgvPrice"].Value.ToString())).ToString("F2");
+
                         return;
                     }
                     
                 }
                 guna2DataGridView1.Rows.Add(new object[] { 0, wdg.id, wdg.pName, 1, wdg.pPrice, wdg.pPrice });
+                getTotal();
             };
         }
 
@@ -227,7 +242,12 @@ namespace CanteenManagementSystem.Model
         private void getTotal()
         {
             double total = 0;
-            lbl
+            totalLabel.Text = "";
+            foreach (DataGridViewRow item in guna2DataGridView1.Rows)
+            {
+                total += double.Parse(item.Cells["dgvAmount"].Value.ToString());
+            }
+            totalLabel.Text = total.ToString("F2");
         }
 
         private void btnTakeAway_Click(object sender, EventArgs e)
@@ -252,6 +272,15 @@ namespace CanteenManagementSystem.Model
         private void gunaLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void searchText_TextChanged(object sender, EventArgs e)
+        {
+            foreach (var item in productPanel.Controls)
+            {
+                var pro = (ucProduct)item;
+                pro.Visible = pro.pName.ToLower().Contains(searchText.Text.Trim().ToLower());
+            }
         }
     }
 }

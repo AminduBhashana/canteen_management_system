@@ -43,6 +43,8 @@
             this.POSLabel = new Guna.UI.WinForms.GunaLabel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.totalLabel = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btnCheckout = new System.Windows.Forms.Button();
             this.categoryPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.categortBtn = new Guna.UI2.WinForms.Guna2TileButton();
@@ -55,8 +57,6 @@
             this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.searchText = new Guna.UI2.WinForms.Guna2TextBox();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.totalLabel = new Guna.UI.WinForms.GunaLabel();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -239,6 +239,31 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1366, 100);
             this.guna2Panel2.TabIndex = 1;
             // 
+            // totalLabel
+            // 
+            this.totalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.totalLabel.AutoSize = true;
+            this.totalLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
+            this.totalLabel.Location = new System.Drawing.Point(1236, 30);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(73, 41);
+            this.totalLabel.TabIndex = 5;
+            this.totalLabel.Text = "0.00";
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
+            this.gunaLabel1.Location = new System.Drawing.Point(1143, 30);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(81, 41);
+            this.gunaLabel1.TabIndex = 4;
+            this.gunaLabel1.Text = "Total";
+            this.gunaLabel1.Click += new System.EventHandler(this.gunaLabel1_Click);
+            // 
             // btnCheckout
             // 
             this.btnCheckout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
@@ -401,6 +426,7 @@
             this.dgvPrice.MinimumWidth = 70;
             this.dgvPrice.Name = "dgvPrice";
             this.dgvPrice.ReadOnly = true;
+            this.dgvPrice.Width = 125;
             // 
             // dgvAmount
             // 
@@ -433,31 +459,7 @@
             this.searchText.SelectedText = "";
             this.searchText.Size = new System.Drawing.Size(371, 43);
             this.searchText.TabIndex = 10;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
-            this.gunaLabel1.Location = new System.Drawing.Point(1143, 30);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(81, 41);
-            this.gunaLabel1.TabIndex = 4;
-            this.gunaLabel1.Text = "Total";
-            this.gunaLabel1.Click += new System.EventHandler(this.gunaLabel1_Click);
-            // 
-            // totalLabel
-            // 
-            this.totalLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.totalLabel.AutoSize = true;
-            this.totalLabel.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
-            this.totalLabel.Location = new System.Drawing.Point(1236, 30);
-            this.totalLabel.Name = "totalLabel";
-            this.totalLabel.Size = new System.Drawing.Size(73, 41);
-            this.totalLabel.TabIndex = 5;
-            this.totalLabel.Text = "0.00";
+            this.searchText.TextChanged += new System.EventHandler(this.searchText_TextChanged);
             // 
             // frmPOS
             // 
