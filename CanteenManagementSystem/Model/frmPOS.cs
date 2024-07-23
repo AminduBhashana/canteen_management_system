@@ -148,7 +148,7 @@ namespace CanteenManagementSystem.Model
                     {
                         item.Cells["dgvQty"].Value = int.Parse(item.Cells["dgvQty"].Value.ToString()) + 1;
                         item.Cells["dgvAmount"].Value = (int.Parse(item.Cells["dgvQty"].Value.ToString()) * double.Parse(item.Cells["dgvPrice"].Value.ToString())).ToString("F2");
-
+                        getTotal();
                         return;
                     }
                     
@@ -281,6 +281,23 @@ namespace CanteenManagementSystem.Model
                 var pro = (ucProduct)item;
                 pro.Visible = pro.pName.ToLower().Contains(searchText.Text.Trim().ToLower());
             }
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            guna2DataGridView1.Rows.Clear();
+            MainID = 0;
+            totalLabel.Text = "00";
+        }
+
+        private void guna2TileButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnKOT_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
