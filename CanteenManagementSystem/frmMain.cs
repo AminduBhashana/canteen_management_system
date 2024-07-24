@@ -90,5 +90,15 @@ namespace CanteenManagementSystem
             AddControls(new frmKitchenView());
 
         }
+
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
