@@ -65,6 +65,7 @@
             this.addButton.HoverState.ImageSize = new System.Drawing.Size(60, 60);
             this.addButton.ImageFlip = Guna.UI2.WinForms.Enums.FlipOrientation.Normal;
             this.addButton.PressedState.ImageSize = new System.Drawing.Size(55, 55);
+            this.addButton.Click += new System.EventHandler(this.addButton_Click_1);
             // 
             // guna2DataGridView1
             // 

@@ -41,21 +41,18 @@ namespace CanteenManagementSystem.View
             MainClass.LoadData(qry, guna2DataGridView1, lb, parameters);
         }
 
-
-        public override void addButton_Click(object sender, EventArgs e)
-        {
-            MainClass.BlurBackground(new Model.frmProductAdd());
-            /* frmCategoryAdd frm = new frmCategoryAdd();
-              frm.ShowDialog();*/
-            GetData();
-        }
-
-
         public override void searchText_TextChanged(object sender, EventArgs e)
         {
             GetData();
         }
 
+        private void addButton_Click_1(object sender, EventArgs e)
+        {
+            MainClass.BlurBackground(new Model.frmProductAdd());
+            //frmProductAdd frm = new frmProductAdd();
+            //frm.ShowDialog();
+            GetData();
+        }
 
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -90,11 +87,6 @@ namespace CanteenManagementSystem.View
                     GetData();
                 }
             }
-        }
-
-        private void addButton_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

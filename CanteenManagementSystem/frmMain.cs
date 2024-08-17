@@ -62,11 +62,6 @@ namespace CanteenManagementSystem
             Application.Exit();
         }
 
-        private void categoryButton_Click(object sender, EventArgs e)
-        {
-            AddControls(new frmCategoryView());
-        }
-
         private void productsButton_Click(object sender, EventArgs e)
         {
             AddControls(new frmProductView());
@@ -89,6 +84,11 @@ namespace CanteenManagementSystem
         {
             AddControls(new frmKitchenView());
 
+        }
+
+        private void categoryButton_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmCategoryView());
         }
     }
 }

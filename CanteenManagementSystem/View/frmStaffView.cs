@@ -41,20 +41,18 @@ namespace CanteenManagementSystem.View
             MainClass.LoadData(qry, guna2DataGridView1, lb, parameters);
         }
 
-
-        public override void addButton_Click(object sender, EventArgs e)
-        {
-            MainClass.BlurBackground(new Model.frmStaffAdd());
-            /* frmCategoryAdd frm = new frmCategoryAdd();
-              frm.ShowDialog();*/
-            GetData();
-        }
-
         public override void searchText_TextChanged(object sender, EventArgs e)
         {
             GetData();
         }
 
+        private void addButton_Click_1(object sender, EventArgs e)
+        {
+            MainClass.BlurBackground(new Model.frmStaffAdd());
+            /* frmStaffAdd frm = new frmStaffAdd();
+             frm.ShowDialog();*/
+            GetData();
+        }
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvedit")

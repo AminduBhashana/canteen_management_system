@@ -79,10 +79,12 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1366, 100);
             this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageRotate = 0F;
@@ -97,6 +99,7 @@
             // guna2TileButton5
             // 
             this.guna2TileButton5.BorderRadius = 10;
+            this.guna2TileButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2TileButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2TileButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2TileButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -113,6 +116,7 @@
             // btnTakeAway
             // 
             this.btnTakeAway.BorderRadius = 10;
+            this.btnTakeAway.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTakeAway.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnTakeAway.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnTakeAway.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -130,6 +134,7 @@
             // btnKOT
             // 
             this.btnKOT.BorderRadius = 10;
+            this.btnKOT.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKOT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKOT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnKOT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -148,6 +153,7 @@
             // btnBillList
             // 
             this.btnBillList.BorderRadius = 10;
+            this.btnBillList.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBillList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBillList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBillList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -167,6 +173,7 @@
             // btnHold
             // 
             this.btnHold.BorderRadius = 10;
+            this.btnHold.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHold.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHold.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHold.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -186,6 +193,7 @@
             // 
             this.btnNew.BackColor = System.Drawing.Color.Transparent;
             this.btnNew.BorderRadius = 10;
+            this.btnNew.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNew.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnNew.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnNew.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -261,6 +269,7 @@
             // 
             // categortBtn
             // 
+            this.categortBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.categortBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.categortBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.categortBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));

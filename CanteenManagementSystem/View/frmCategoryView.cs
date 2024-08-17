@@ -1,4 +1,5 @@
-﻿using CanteenManagementSystem.Model;
+﻿using CanteenManagementSystem;
+using CanteenManagementSystem.Model;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections;
@@ -39,20 +40,20 @@ namespace CanteenManagementSystem.View
              GetData();
          }
 
-        public override void addButton_Click(object sender, EventArgs e)
-        {
-            MainClass.BlurBackground(new frmCategoryAdd());
-            frmCategoryAdd frm = new frmCategoryAdd();
-            frm.ShowDialog();
-            GetData();
-        }
-
         public override void searchText_TextChanged(object sender, EventArgs e)
          {
              GetData();
          }
 
-         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void addButton_Click_1(object sender, EventArgs e)
+        {
+            MainClass.BlurBackground(new Model.frmCategoryAdd());
+            /*  frmCategoryAdd frm = new frmCategoryAdd();
+              frm.ShowDialog();*/
+            GetData();
+        }
+
+        private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
          {
              if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvedit")
              {
@@ -60,6 +61,7 @@ namespace CanteenManagementSystem.View
                  frmCategoryAdd frm = new frmCategoryAdd();
                  frm.id = Convert.ToInt32(guna2DataGridView1.CurrentRow.Cells["dgvid"].Value);
                  frm.nameText.Text = Convert.ToString(guna2DataGridView1.CurrentRow.Cells["dgvName"].Value);
+
                  MainClass.BlurBackground(frm);
                  GetData();
 
