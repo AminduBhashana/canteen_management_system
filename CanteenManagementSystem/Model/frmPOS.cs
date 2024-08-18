@@ -84,7 +84,7 @@ namespace CanteenManagementSystem.Model
 
             DataTable dt = new DataTable();
 
-            using (MySqlConnection connection = new MySqlConnection("server=localhost;uid=root;pwd=1234;database=canteen_management_system"))
+            /*using (MySqlConnection connection = new MySqlConnection("server=localhost;uid=root;pwd=1234;database=canteen_management_system"))
             {
                 connection.Open();
                 using (MySqlCommand cmd = new MySqlCommand(qry, connection))
@@ -94,7 +94,7 @@ namespace CanteenManagementSystem.Model
                         da.Fill(dt);
                     }
                 }
-            }
+            }*/
 
             categoryPanel.Controls.Clear();
 
@@ -192,7 +192,7 @@ namespace CanteenManagementSystem.Model
 
             DataTable dt = new DataTable();
 
-            using (MySqlConnection connection = new MySqlConnection(connString))
+            /*using (MySqlConnection connection = new MySqlConnection(connString))
             {
                 connection.Open();
                 using (MySqlCommand cmd = new MySqlCommand(qry, connection))
@@ -202,7 +202,7 @@ namespace CanteenManagementSystem.Model
                         da.Fill(dt);
                     }
                 }
-            }
+            }*/
 
             foreach (DataRow item in dt.Rows)
             {
