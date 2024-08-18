@@ -41,8 +41,21 @@ namespace CanteenManagementSystem.View
             MainClass.LoadData(qry, guna2DataGridView1, lb, parameters);
         }
 
+<<<<<<< Updated upstream
+        public override void searchText_TextChanged(object sender, EventArgs e)
+=======
+
         public override void searchText_TextChanged(object sender, EventArgs e)
         {
+            GetData();
+        }
+
+        private void addButton_Click_1(object sender, EventArgs e)
+>>>>>>> Stashed changes
+        {
+            MainClass.BlurBackground(new Model.frmStaffAdd());
+            /* frmStaffAdd frm = new frmStaffAdd();
+              frm.ShowDialog();*/
             GetData();
         }
 
@@ -90,5 +103,7 @@ namespace CanteenManagementSystem.View
                 }
             }
         }
+
+      
     }
 }

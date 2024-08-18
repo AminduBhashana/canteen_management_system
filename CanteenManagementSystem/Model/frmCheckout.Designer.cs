@@ -50,7 +50,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.guna2ControlBox1);
-            this.panel1.Size = new System.Drawing.Size(496, 100);
+            this.panel1.Size = new System.Drawing.Size(495, 100);
             this.panel1.Controls.SetChildIndex(this.pictureBox1, 0);
             this.panel1.Controls.SetChildIndex(this.label1, 0);
             this.panel1.Controls.SetChildIndex(this.guna2ControlBox1, 0);
@@ -67,8 +67,8 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(0, 332);
-            this.panel2.Size = new System.Drawing.Size(496, 75);
+            this.panel2.Location = new System.Drawing.Point(0, 328);
+            this.panel2.Size = new System.Drawing.Size(495, 85);
             // 
             // closeButton
             // 
@@ -83,7 +83,7 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(419, 12);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(418, 12);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(54, 36);
             this.guna2ControlBox1.TabIndex = 3;
@@ -320,7 +320,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 407);
+            this.ClientSize = new System.Drawing.Size(495, 413);
             this.Controls.Add(this.txtChange);
             this.Controls.Add(this.txtReceived);
             this.Controls.Add(this.txtBillAmount);

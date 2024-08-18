@@ -54,5 +54,10 @@ namespace CanteenManagementSystem.Model
                 txtName.Focus();
             }
         }
+
+        private void closeButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
     }

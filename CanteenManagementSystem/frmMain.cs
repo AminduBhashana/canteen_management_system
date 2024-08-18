@@ -43,7 +43,6 @@ namespace CanteenManagementSystem
            
         }
 
-
         private void frmMain_Load(object sender, EventArgs e)
         {
             label2.Text = MainClass.USER;
@@ -55,11 +54,17 @@ namespace CanteenManagementSystem
             AddControls(new frmHome());
         }
 
+<<<<<<< Updated upstream
        
 
         private void exitButton_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
+=======
+        private void categoryButton_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmCategoryView());
+>>>>>>> Stashed changes
         }
 
         private void productsButton_Click(object sender, EventArgs e)
@@ -67,12 +72,15 @@ namespace CanteenManagementSystem
             AddControls(new frmProductView());
         }
 
+        private void tableButton_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmTableView());
+        }
+
         private void staffButton_Click(object sender, EventArgs e)
         {
             AddControls(new frmStaffView());
         }
-
-       
 
         private void posButton_Click(object sender, EventArgs e)
         {
@@ -88,7 +96,21 @@ namespace CanteenManagementSystem
 
         private void categoryButton_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             AddControls(new frmCategoryView());
+=======
+
+        }
+
+        private void exitButton_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void guna2ControlBox2_Click(object sender, EventArgs e)
+        {
+
+>>>>>>> Stashed changes
         }
     }
 }

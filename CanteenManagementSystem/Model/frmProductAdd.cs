@@ -138,5 +138,19 @@ namespace CanteenManagementSystem.Model
                 }
             }
         }
+<<<<<<< Updated upstream
 }
+=======
+
+        private void closeButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbCat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
+>>>>>>> Stashed changes
 }

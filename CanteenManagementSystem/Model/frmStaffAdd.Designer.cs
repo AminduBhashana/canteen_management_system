@@ -67,6 +67,7 @@
             // closeButton
             // 
             this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.Click += new System.EventHandler(this.closeButton_Click_1);
             // 
             // saveButton
             // 

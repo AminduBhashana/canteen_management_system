@@ -40,6 +40,17 @@ namespace CanteenManagementSystem.View
              GetData();
          }
 
+<<<<<<< Updated upstream
+=======
+        private void addButton_Click_1(object sender, EventArgs e)
+        {
+            MainClass.BlurBackground(new frmCategoryAdd());
+            //frmCategoryAdd frm = new frmCategoryAdd();
+            //frm.ShowDialog();
+            GetData();
+        }
+
+>>>>>>> Stashed changes
         public override void searchText_TextChanged(object sender, EventArgs e)
          {
              GetData();
