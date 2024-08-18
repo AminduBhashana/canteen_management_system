@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CanteenManagementSystem.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,16 +11,18 @@ using System.Windows.Forms;
 
 namespace CanteenManagementSystem.View
 {
-    public partial class frmTableView : Form
+    public partial class frmTableView : SampleView
     {
         public frmTableView()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void addButton_Click_1(object sender, EventArgs e)
         {
-
+            MainClass.BlurBackground(new frmTableAdd());
+            /*frmTableAdd frm = new frmTableAdd();
+            frm.ShowDialog();*/
         }
     }
 }

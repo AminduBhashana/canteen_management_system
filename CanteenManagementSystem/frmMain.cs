@@ -55,13 +55,6 @@ namespace CanteenManagementSystem
             AddControls(new frmHome());
         }
 
-       
-
-        private void exitButton_Click_1(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void categoryButton_Click(object sender, EventArgs e)
         {
             AddControls(new frmCategoryView());
@@ -72,12 +65,15 @@ namespace CanteenManagementSystem
             AddControls(new frmProductView());
         }
 
+        private void tablesButton_Click(object sender, EventArgs e)
+        {
+            AddControls(new frmTableView());
+        }
+
         private void staffButton_Click(object sender, EventArgs e)
         {
             AddControls(new frmStaffView());
         }
-
-       
 
         private void posButton_Click(object sender, EventArgs e)
         {
@@ -88,7 +84,6 @@ namespace CanteenManagementSystem
         private void kitchenButton_Click(object sender, EventArgs e)
         {
             AddControls(new frmKitchenView());
-
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
@@ -96,7 +91,12 @@ namespace CanteenManagementSystem
 
         }
 
-        private void gunaButton1_Click(object sender, EventArgs e)
+        private void exitButton_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void TopPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

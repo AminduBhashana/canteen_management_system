@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CanteenManagementSystem.Model
 {
-    public partial class frmTableAdd : Form
+    public partial class frmTableAdd : SampleAdd
     {
         public frmTableAdd()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
