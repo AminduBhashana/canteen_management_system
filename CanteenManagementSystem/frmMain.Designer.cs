@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.navigationPanel = new Guna.UI.WinForms.GunaPanel();
-            this.tableButton = new Guna.UI.WinForms.GunaButton();
+            this.tablesButton = new Guna.UI.WinForms.GunaButton();
             this.settingsButton = new Guna.UI.WinForms.GunaButton();
             this.kitchenButton = new Guna.UI.WinForms.GunaButton();
             this.posButton = new Guna.UI.WinForms.GunaButton();
@@ -54,7 +54,7 @@
             // navigationPanel
             // 
             this.navigationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
-            this.navigationPanel.Controls.Add(this.tableButton);
+            this.navigationPanel.Controls.Add(this.tablesButton);
             this.navigationPanel.Controls.Add(this.settingsButton);
             this.navigationPanel.Controls.Add(this.kitchenButton);
             this.navigationPanel.Controls.Add(this.posButton);
@@ -71,36 +71,36 @@
             this.navigationPanel.Size = new System.Drawing.Size(359, 960);
             this.navigationPanel.TabIndex = 0;
             // 
-            // tableButton
+            // tablesButton
             // 
-            this.tableButton.Animated = true;
-            this.tableButton.AnimationHoverSpeed = 0.07F;
-            this.tableButton.AnimationSpeed = 0.03F;
-            this.tableButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
-            this.tableButton.BorderColor = System.Drawing.Color.Transparent;
-            this.tableButton.BorderSize = 2;
-            this.tableButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.tableButton.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.tableButton.FocusedColor = System.Drawing.Color.Empty;
-            this.tableButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableButton.ForeColor = System.Drawing.Color.White;
-            this.tableButton.Image = ((System.Drawing.Image)(resources.GetObject("tableButton.Image")));
-            this.tableButton.ImageOffsetX = 35;
-            this.tableButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.tableButton.Location = new System.Drawing.Point(36, 554);
-            this.tableButton.Margin = new System.Windows.Forms.Padding(4);
-            this.tableButton.Name = "tableButton";
-            this.tableButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tableButton.OnHoverBorderColor = System.Drawing.Color.White;
-            this.tableButton.OnHoverForeColor = System.Drawing.Color.Black;
-            this.tableButton.OnHoverImage = null;
-            this.tableButton.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.tableButton.Size = new System.Drawing.Size(284, 45);
-            this.tableButton.TabIndex = 9;
-            this.tableButton.Text = "Tables";
-            this.tableButton.TextOffsetX = 25;
-            this.tableButton.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
-            this.tableButton.Click += new System.EventHandler(this.gunaButton1_Click);
+            this.tablesButton.Animated = true;
+            this.tablesButton.AnimationHoverSpeed = 0.07F;
+            this.tablesButton.AnimationSpeed = 0.03F;
+            this.tablesButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
+            this.tablesButton.BorderColor = System.Drawing.Color.Transparent;
+            this.tablesButton.BorderSize = 2;
+            this.tablesButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.tablesButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.tablesButton.FocusedColor = System.Drawing.Color.Empty;
+            this.tablesButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tablesButton.ForeColor = System.Drawing.Color.White;
+            this.tablesButton.Image = ((System.Drawing.Image)(resources.GetObject("tablesButton.Image")));
+            this.tablesButton.ImageOffsetX = 35;
+            this.tablesButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.tablesButton.Location = new System.Drawing.Point(34, 606);
+            this.tablesButton.Margin = new System.Windows.Forms.Padding(4);
+            this.tablesButton.Name = "tablesButton";
+            this.tablesButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.tablesButton.OnHoverBorderColor = System.Drawing.Color.White;
+            this.tablesButton.OnHoverForeColor = System.Drawing.Color.Black;
+            this.tablesButton.OnHoverImage = null;
+            this.tablesButton.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.tablesButton.Size = new System.Drawing.Size(284, 45);
+            this.tablesButton.TabIndex = 9;
+            this.tablesButton.Text = "Tables";
+            this.tablesButton.TextOffsetX = 25;
+            this.tablesButton.TextRenderingHint = Guna.UI.WinForms.DrawingTextRenderingHint.AntiAlias;
+            this.tablesButton.Click += new System.EventHandler(this.tablesButton_Click);
             // 
             // settingsButton
             // 
@@ -118,7 +118,7 @@
             this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
             this.settingsButton.ImageOffsetX = 35;
             this.settingsButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.settingsButton.Location = new System.Drawing.Point(36, 782);
+            this.settingsButton.Location = new System.Drawing.Point(34, 876);
             this.settingsButton.Margin = new System.Windows.Forms.Padding(4);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -149,7 +149,7 @@
             this.kitchenButton.Image = ((System.Drawing.Image)(resources.GetObject("kitchenButton.Image")));
             this.kitchenButton.ImageOffsetX = 35;
             this.kitchenButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.kitchenButton.Location = new System.Drawing.Point(36, 725);
+            this.kitchenButton.Location = new System.Drawing.Point(34, 808);
             this.kitchenButton.Margin = new System.Windows.Forms.Padding(4);
             this.kitchenButton.Name = "kitchenButton";
             this.kitchenButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -180,7 +180,7 @@
             this.posButton.Image = ((System.Drawing.Image)(resources.GetObject("posButton.Image")));
             this.posButton.ImageOffsetX = 35;
             this.posButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.posButton.Location = new System.Drawing.Point(36, 668);
+            this.posButton.Location = new System.Drawing.Point(34, 741);
             this.posButton.Margin = new System.Windows.Forms.Padding(4);
             this.posButton.Name = "posButton";
             this.posButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -211,7 +211,7 @@
             this.staffButton.Image = ((System.Drawing.Image)(resources.GetObject("staffButton.Image")));
             this.staffButton.ImageOffsetX = 35;
             this.staffButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.staffButton.Location = new System.Drawing.Point(36, 611);
+            this.staffButton.Location = new System.Drawing.Point(34, 673);
             this.staffButton.Margin = new System.Windows.Forms.Padding(4);
             this.staffButton.Name = "staffButton";
             this.staffButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -242,7 +242,7 @@
             this.productsButton.Image = ((System.Drawing.Image)(resources.GetObject("productsButton.Image")));
             this.productsButton.ImageOffsetX = 35;
             this.productsButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.productsButton.Location = new System.Drawing.Point(36, 497);
+            this.productsButton.Location = new System.Drawing.Point(34, 541);
             this.productsButton.Margin = new System.Windows.Forms.Padding(4);
             this.productsButton.Name = "productsButton";
             this.productsButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -273,7 +273,7 @@
             this.categoryButton.Image = ((System.Drawing.Image)(resources.GetObject("categoryButton.Image")));
             this.categoryButton.ImageOffsetX = 35;
             this.categoryButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.categoryButton.Location = new System.Drawing.Point(36, 440);
+            this.categoryButton.Location = new System.Drawing.Point(34, 475);
             this.categoryButton.Margin = new System.Windows.Forms.Padding(4);
             this.categoryButton.Name = "categoryButton";
             this.categoryButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -304,7 +304,7 @@
             this.homeButton.Image = ((System.Drawing.Image)(resources.GetObject("homeButton.Image")));
             this.homeButton.ImageOffsetX = 35;
             this.homeButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.homeButton.Location = new System.Drawing.Point(36, 383);
+            this.homeButton.Location = new System.Drawing.Point(34, 406);
             this.homeButton.Margin = new System.Windows.Forms.Padding(4);
             this.homeButton.Name = "homeButton";
             this.homeButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -359,6 +359,7 @@
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(1565, 126);
             this.TopPanel.TabIndex = 3;
+            this.TopPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TopPanel_Paint);
             // 
             // guna2ControlBox3
             // 
@@ -366,9 +367,9 @@
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(1369, 3);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(1351, -9);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(60, 38);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(80, 55);
             this.guna2ControlBox3.TabIndex = 0;
             // 
             // guna2ControlBox2
@@ -377,9 +378,9 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1435, 3);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1421, -9);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
-            this.guna2ControlBox2.Size = new System.Drawing.Size(60, 38);
+            this.guna2ControlBox2.Size = new System.Drawing.Size(80, 55);
             this.guna2ControlBox2.TabIndex = 0;
             // 
             // exitButton
@@ -389,9 +390,9 @@
             this.exitButton.HoverState.BorderColor = System.Drawing.Color.White;
             this.exitButton.HoverState.FillColor = System.Drawing.Color.Red;
             this.exitButton.IconColor = System.Drawing.Color.White;
-            this.exitButton.Location = new System.Drawing.Point(1501, 3);
+            this.exitButton.Location = new System.Drawing.Point(1491, -9);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(60, 38);
+            this.exitButton.Size = new System.Drawing.Size(80, 55);
             this.exitButton.TabIndex = 0;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click_1);
             // 
@@ -454,6 +455,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox exitButton;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
-        private Guna.UI.WinForms.GunaButton tableButton;
+        private Guna.UI.WinForms.GunaButton tablesButton;
     }
 }

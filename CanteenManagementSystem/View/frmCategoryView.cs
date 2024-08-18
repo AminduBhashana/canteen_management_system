@@ -39,11 +39,11 @@ namespace CanteenManagementSystem.View
              GetData();
          }
 
-        public override void addButton_Click(object sender, EventArgs e)
+        private void addButton_Click_1(object sender, EventArgs e)
         {
             MainClass.BlurBackground(new frmCategoryAdd());
-            frmCategoryAdd frm = new frmCategoryAdd();
-            frm.ShowDialog();
+            /*frmCategoryAdd frm = new frmCategoryAdd();
+            frm.ShowDialog();*/
             GetData();
         }
 
@@ -85,5 +85,7 @@ namespace CanteenManagementSystem.View
                  }
              }
          }
+
+       
     }
 }
