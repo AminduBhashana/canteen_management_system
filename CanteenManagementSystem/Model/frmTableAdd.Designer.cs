@@ -61,6 +61,7 @@
             // saveButton
             // 
             this.saveButton.FlatAppearance.BorderSize = 0;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click_1);
             // 
             // nameText
             // 
@@ -118,5 +119,6 @@
 
         public Guna.UI2.WinForms.Guna2TextBox nameText;
         private System.Windows.Forms.Label label2;
+        public Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
     }
 }
