@@ -84,7 +84,7 @@ namespace CanteenManagementSystem.Model
 
             DataTable dt = new DataTable();
 
-            /*using (MySqlConnection connection = new MySqlConnection("server=localhost;uid=root;pwd=1234;database=canteen_management_system"))
+            using (MySqlConnection connection = new MySqlConnection("server=localhost;uid=root;pwd=1234;database=canteen_management_system"))
             {
                 connection.Open();
                 using (MySqlCommand cmd = new MySqlCommand(qry, connection))
@@ -94,7 +94,7 @@ namespace CanteenManagementSystem.Model
                         da.Fill(dt);
                     }
                 }
-            }*/
+            }
 
             categoryPanel.Controls.Clear();
 
@@ -181,7 +181,7 @@ namespace CanteenManagementSystem.Model
                 guna2DataGridView1.Rows.Add(obj);
 
             }
-           // GetTotal();
+            //GetTotal();
 
         }
 
@@ -192,7 +192,7 @@ namespace CanteenManagementSystem.Model
 
             DataTable dt = new DataTable();
 
-            /*using (MySqlConnection connection = new MySqlConnection(connString))
+            using (MySqlConnection connection = new MySqlConnection(connString))
             {
                 connection.Open();
                 using (MySqlCommand cmd = new MySqlCommand(qry, connection))
@@ -202,7 +202,7 @@ namespace CanteenManagementSystem.Model
                         da.Fill(dt);
                     }
                 }
-            }*/
+            }
 
             foreach (DataRow item in dt.Rows)
             {
@@ -252,6 +252,11 @@ namespace CanteenManagementSystem.Model
 
         private void btnTakeAway_Click(object sender, EventArgs e)
         {
+            lblTable.Text = "";
+            lblWaiter.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Visible = false;
+            OrderType = "Take Away";
             frmAddCustomer frm = new frmAddCustomer();
             frm.mainID = MainID;
             frm.orderType = OrderType;
@@ -285,6 +290,10 @@ namespace CanteenManagementSystem.Model
 
         private void btnNew_Click(object sender, EventArgs e)
         {
+            lblTable.Text = "";
+            lblWaiter.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Visible = false;
             guna2DataGridView1.Rows.Clear();
             MainID = 0;
             totalLabel.Text = "00";

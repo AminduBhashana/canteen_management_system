@@ -16,5 +16,10 @@ namespace CanteenManagementSystem.Model
         {
             InitializeComponent();
         }
+
+        private void frmSelectTable_Load(object sender, EventArgs e)
+        {
+          
+        }
     }
 }
