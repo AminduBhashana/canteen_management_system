@@ -108,8 +108,10 @@ namespace CanteenManagementSystem.Model
             {
                 guna2MessageDialog1.Show("Saved successfully.");
                 id = 0;
+                cID = 0;
                 txtName.Text = "";
                 txtPrice.Text = "";
+                cbCat.SelectedIndex = 0;
                 cbCat.SelectedIndex = -1;
                 txtImage.Image = CanteenManagementSystem.Properties.Resources.products;
                 txtName.Focus();

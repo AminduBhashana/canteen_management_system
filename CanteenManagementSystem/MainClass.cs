@@ -166,7 +166,7 @@ namespace CanteenManagementSystem
         {
             string connString = "server=localhost;uid=root;pwd=1234;database=canteen_management_system";
 
-           /* using (MySqlConnection connection = new MySqlConnection(connString))
+            using (MySqlConnection connection = new MySqlConnection(connString))
             {
                 connection.Open();
                 using (MySqlCommand cmd = new MySqlCommand(qry, connection))
@@ -175,7 +175,7 @@ namespace CanteenManagementSystem
                     using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
                     {
                         DataTable dt = new DataTable();
-                        da.Fill(dt);                   
+                        da.Fill(dt);
 
                         cb.DisplayMember = "name";
                         cb.ValueMember = "id";
@@ -183,7 +183,7 @@ namespace CanteenManagementSystem
                         cb.SelectedIndex = -1; // Ensure no item is selected by default
                     }
                 }
-            }*/
+            }
         }
 
     }
