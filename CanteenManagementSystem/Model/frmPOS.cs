@@ -119,6 +119,12 @@ namespace CanteenManagementSystem.Model
         private void b_Click(object sender, EventArgs e)
         {
             Guna.UI2.WinForms.Guna2Button b = (Guna.UI2.WinForms.Guna2Button)sender;
+            if(b.Text == "All Categories")
+            {
+                searchText.Text = "1";
+                searchText.Text = "";
+                return;
+            }
             foreach (var item in productPanel.Controls)
             {
                 var pro = (ucProduct)item;
@@ -301,7 +307,31 @@ namespace CanteenManagementSystem.Model
 
         private void guna2TileButton5_Click(object sender, EventArgs e)
         {
+            frmSelectTable frm = new frmSelectTable();
+            MainClass.BlurBackground(frm);
+            if(frm.TableName != "")
+            {
+                lblTable.Text = frm.TableName;
+                lblTable.Visible = true;
+            }
+            else
+            {
+                lblTable.Text = "";
+                lblTable.Visible = false;
+            }
 
+            frmSelectWaiter frm2 = new frmSelectWaiter();
+            MainClass.BlurBackground(frm2);
+            if(frm2.waiterName != "")
+            {
+                lblWaiter.Text = frm2.waiterName;
+                lblWaiter.Visible=true;
+            }
+            else
+            {
+                lblWaiter.Text = "";
+                lblTable.Visible = false;
+            }
         }
 
         private void btnKOT_Click(object sender, EventArgs e)
