@@ -17,10 +17,11 @@ namespace CanteenManagementSystem.Model
         public frmCheckout()
         {
             InitializeComponent();
+            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
         }
+
         public double amt;
         public int MainID = 0;
-
 
         private void txtReceived_TextChanged(object sender, EventArgs e)
         {
@@ -31,30 +32,44 @@ namespace CanteenManagementSystem.Model
             double.TryParse(txtBillAmount.Text, out amt);
             double.TryParse(txtReceived.Text, out receipt);
 
-            change = Math.Abs(amt - receipt); //convert positve or negative to always positive
+            change = Math.Abs(amt - receipt);
 
             txtChange.Text = change.ToString();
         }
 
-        public virtual void saveButton_Click(object sender, EventArgs e)
+        public virtual void SaveButton_Click(object sender, EventArgs e)
         {
-            string qry = @" Update tblMain set total = @total, received = @rec, change= @change, status = 'Paid' where MainID = @id";
+            // Validate input fields
+            if (string.IsNullOrEmpty(txtBillAmount.Text) || string.IsNullOrEmpty(txtReceived.Text) || string.IsNullOrEmpty(txtChange.Text))
+            {
+                guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                guna2MessageDialog1.Show("Please fill all fields.");
+                return;
+            }
+
+            // Proceed with database update if validation passes
+            string qry = @"UPDATE table_main 
+                   SET total = @total, recieved = @rec, `change` = @change, status = 'Paid' 
+                   WHERE mainId = @id";
 
             Hashtable ht = new Hashtable();
             ht.Add("@id", MainID);
             ht.Add("@total", txtBillAmount.Text);
             ht.Add("@rec", txtReceived.Text);
             ht.Add("@change", txtChange.Text);
+
             if (MainClass.SQl(qry, ht) > 0)
             {
                 guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                guna2MessageDialog1.Show("Saved Successfull");
+                guna2MessageDialog1.Show("Saved Successfully");
                 this.Close();
             }
         }
 
+
         private void frmCheckout_Load(object sender, EventArgs e)
         {
+            this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
             txtBillAmount.Text = amt.ToString();
         }
     }

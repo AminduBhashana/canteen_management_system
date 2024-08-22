@@ -187,10 +187,26 @@ namespace CanteenManagementSystem.Model
                         DataTable dt2 = new DataTable();
                         da2.Fill(dt2);
 
+                        if (dt2.Rows[0]["orderType"].ToString() == "Take Away")
+                        {
+                            btnTakeAway.Checked = true;
+                            lblWaiter.Visible = false;
+                            lblTable.Visible = false;
+                        }
+                        else
+                        {
+                            btnDine.Checked = true;
+                            lblWaiter.Visible = true;
+                            lblTable.Visible = true;
+                        }
+
                         guna2DataGridView1.Rows.Clear();
 
                         foreach (DataRow item in dt2.Rows)
                         {
+                            lblTable.Text = item["tableName"].ToString();
+                            lblWaiter.Text = item["waiterName"].ToString();
+
                             string detailid = item["detailId"].ToString();
                             string proid = item["proId"].ToString();
                             string proName = item["productName"].ToString();
@@ -251,16 +267,16 @@ namespace CanteenManagementSystem.Model
         {
             frmCheckout frm = new frmCheckout();
             frm.MainID = id;
-           // frm.amt = Convert.ToDouble(lb1Total.Text); 
+            frm.amt = Convert.ToDouble(totalLabel.Text); 
             MainClass.BlurBackground(frm);
 
-          /*  MainID = 0;
+            MainID = 0;
             guna2DataGridView1.Rows.Clear();
-            lb1Table.Text = "";
-            lb1Waiter.Text = "";
-            lb1Table.Visible = false; 
-            lb1waiter.Visible = false; 
-            lb1Total.Text = "00";*/
+            lblTable.Text = "";
+            lblWaiter.Text = "";
+            lblTable.Visible = false;
+            lblWaiter.Visible = false;
+            totalLabel.Text = "00";
 
         }
 
