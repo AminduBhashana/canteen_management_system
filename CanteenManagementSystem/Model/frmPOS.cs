@@ -33,7 +33,11 @@ namespace CanteenManagementSystem.Model
             loadProducts();
         }
 
-
+        public static MySqlConnection GetConnection()
+        {
+            string connString = "server=localhost;uid=root;pwd=1234;database=canteen_management_system";
+            return new MySqlConnection(connString);
+        }
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -166,30 +170,44 @@ namespace CanteenManagementSystem.Model
 
         private void LoadEntries()
         {
-            string qry = @"Select * from tblMain minner join tblDetails d on m.MainID= d.MainID inner join products p on p.pID= d.proID Where m.MainID = " + id + "";
-            SqlCommand cmd2 = new SqlCommand(qry, MainClass.con);
-            DataTable dt2 = new DataTable();
-            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
-            da2.Fill(dt2);
+            string qry = @"SELECT * FROM table_main m 
+                   INNER JOIN table_details d ON m.mainId = d.mainId 
+                   INNER JOIN products p ON p.productId = d.proId 
+                   WHERE m.mainId = @id";
 
-            guna2DataGridView1.Rows.Clear();
-
-            foreach (DataRow item in dt2.Rows)
+            using (MySqlConnection connection = GetConnection())
             {
-                string detailid = item["DetailID"].ToString(); 
-                string proid = item["proID"].ToString();
-                string proName = item["pName"].ToString();
-                string qty = item["qty"].ToString();
-                string price = item["price"].ToString();
-                string amount = item["amount"].ToString();
+                connection.Open();  // Open the connection
+                using (MySqlCommand cmd2 = new MySqlCommand(qry, connection))
+                {
+                    cmd2.Parameters.AddWithValue("@id", id); // Using parameterized query to prevent SQL injection
 
-                object[] obj = { 0, detailid, proid, qty, price, amount }; 
-                guna2DataGridView1.Rows.Add(obj);
+                    using (MySqlDataAdapter da2 = new MySqlDataAdapter(cmd2))
+                    {
+                        DataTable dt2 = new DataTable();
+                        da2.Fill(dt2);
 
+                        guna2DataGridView1.Rows.Clear();
+
+                        foreach (DataRow item in dt2.Rows)
+                        {
+                            string detailid = item["detailId"].ToString();
+                            string proid = item["proId"].ToString();
+                            string proName = item["productName"].ToString();
+                            string qty = item["qty"].ToString();
+                            string price = item["price"].ToString();
+                            string amount = item["amount"].ToString();
+
+                            object[] obj = { 0, detailid, proid,proName, qty, price, amount };
+                            guna2DataGridView1.Rows.Add(obj);
+                        }
+                        getTotal();
+                    }
+                }
             }
-            //GetTotal();
-
         }
+
+
 
         private void loadProducts()
         {
@@ -373,7 +391,7 @@ namespace CanteenManagementSystem.Model
                         cmd.Parameters.AddWithValue("@waiterName", lblWaiter.Text);
                         cmd.Parameters.AddWithValue("@status", "pending");
                         cmd.Parameters.AddWithValue("@orderType", OrderType);
-                        cmd.Parameters.AddWithValue("@total", Convert.ToDouble(0));
+                        cmd.Parameters.AddWithValue("@total", Convert.ToDouble(totalLabel.Text));
                         cmd.Parameters.AddWithValue("@recieved", Convert.ToDouble(0));
                         cmd.Parameters.AddWithValue("@change", Convert.ToDouble(0));
 

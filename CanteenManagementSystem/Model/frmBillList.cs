@@ -27,20 +27,27 @@ namespace CanteenManagementSystem.Model
 
         private void LoadData()
         {
-            string qry = @"Select MainID, TableName,WaiterName,orderType,status,total from tblMain where status <> 'pending' "; 
+            string qry = @"SELECT mainId, tableName, waiterName, orderType, status, total 
+               FROM table_main 
+               WHERE status <> 'pending'";
 
-            
-
+            // Create a ListBox to store column names
             ListBox lb = new ListBox();
-            lb.Items.Add(dgvid);
-            lb.Items.Add(dgvtable);
-            lb.Items.Add(dgvWaiter);
-            lb.Items.Add(dgvType);
-            lb.Items.Add(dgvStatus);
-            lb.Items.Add(dgvTotal);
+            lb.Items.Add(dgvid);      
+            lb.Items.Add(dgvtable);    
+            lb.Items.Add(dgvWaiter);  
+            lb.Items.Add(dgvType);     
+            lb.Items.Add(dgvStatus);  
+            lb.Items.Add(dgvTotal);   
 
-           // MainClass.LoadData(qry, guna2DataGridView1, lb, parameters);
+            // Define parameters if any (create Hashtable)
+            Hashtable parameters = new Hashtable();
+            // Example: parameters.Add("@someParameter", value);
+
+            // Use MainClass to load data into the DataGridView
+            MainClass.LoadData(qry, guna2DataGridView1, lb, parameters);
         }
+
 
         private void guna2DataGridView_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -64,7 +71,7 @@ namespace CanteenManagementSystem.Model
                 this.Close();
 
             }
-            /*if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvdel")
+            if (guna2DataGridView1.CurrentCell.OwningColumn.Name == "dgvdel")
             {
                 //need to confirm before delete
                 guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
@@ -81,9 +88,9 @@ namespace CanteenManagementSystem.Model
                     guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
 
                     guna2MessageDialog1.Show("Deleted successfully");
-                   
+
                 }
-            }*/
+            }
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
