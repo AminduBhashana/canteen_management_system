@@ -52,9 +52,6 @@
             this.categortBtn = new Guna.UI2.WinForms.Guna2TileButton();
             this.productPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.searchText = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.guna2MessageDialog2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.dgvSno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvproID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +59,9 @@
             this.dgvQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.searchText = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2MessageDialog1 = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2MessageDialog2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -224,6 +224,7 @@
             this.btnHold.Size = new System.Drawing.Size(89, 62);
             this.btnHold.TabIndex = 5;
             this.btnHold.Text = "Hold";
+            this.btnHold.Click += new System.EventHandler(this.btnHold_Click);
             // 
             // btnNew
             // 
@@ -425,47 +426,6 @@
             this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick_1);
             this.guna2DataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.guna2DataGridView_CellFormatting);
             // 
-            // searchText
-            // 
-            this.searchText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchText.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.searchText.DefaultText = "";
-            this.searchText.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.searchText.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.searchText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchText.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchText.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.searchText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchText.IconLeft = global::CanteenManagementSystem.Properties.Resources.search_9_256;
-            this.searchText.Location = new System.Drawing.Point(218, 133);
-            this.searchText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.searchText.Name = "searchText";
-            this.searchText.PasswordChar = '\0';
-            this.searchText.PlaceholderText = "Search Here";
-            this.searchText.SelectedText = "";
-            this.searchText.Size = new System.Drawing.Size(371, 43);
-            this.searchText.TabIndex = 10;
-            this.searchText.TextChanged += new System.EventHandler(this.searchText_TextChanged);
-            // 
-            // guna2MessageDialog1
-            // 
-            this.guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.guna2MessageDialog1.Caption = "Canteen Management system";
-            this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-            this.guna2MessageDialog1.Parent = null;
-            this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
-            this.guna2MessageDialog1.Text = null;
-            // 
-            // guna2MessageDialog2
-            // 
-            this.guna2MessageDialog2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-            this.guna2MessageDialog2.Caption = null;
-            this.guna2MessageDialog2.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
-            this.guna2MessageDialog2.Parent = null;
-            this.guna2MessageDialog2.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
-            this.guna2MessageDialog2.Text = null;
-            // 
             // dgvSno
             // 
             this.dgvSno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -528,6 +488,47 @@
             this.dgvAmount.Name = "dgvAmount";
             this.dgvAmount.ReadOnly = true;
             this.dgvAmount.Width = 70;
+            // 
+            // searchText
+            // 
+            this.searchText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchText.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.searchText.DefaultText = "";
+            this.searchText.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.searchText.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.searchText.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchText.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.searchText.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchText.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.searchText.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchText.IconLeft = global::CanteenManagementSystem.Properties.Resources.search_9_256;
+            this.searchText.Location = new System.Drawing.Point(218, 133);
+            this.searchText.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchText.Name = "searchText";
+            this.searchText.PasswordChar = '\0';
+            this.searchText.PlaceholderText = "Search Here";
+            this.searchText.SelectedText = "";
+            this.searchText.Size = new System.Drawing.Size(371, 43);
+            this.searchText.TabIndex = 10;
+            this.searchText.TextChanged += new System.EventHandler(this.searchText_TextChanged);
+            // 
+            // guna2MessageDialog1
+            // 
+            this.guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialog1.Caption = "Canteen Management system";
+            this.guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.guna2MessageDialog1.Parent = null;
+            this.guna2MessageDialog1.Style = Guna.UI2.WinForms.MessageDialogStyle.Light;
+            this.guna2MessageDialog1.Text = null;
+            // 
+            // guna2MessageDialog2
+            // 
+            this.guna2MessageDialog2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialog2.Caption = null;
+            this.guna2MessageDialog2.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            this.guna2MessageDialog2.Parent = null;
+            this.guna2MessageDialog2.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.guna2MessageDialog2.Text = null;
             // 
             // frmPOS
             // 

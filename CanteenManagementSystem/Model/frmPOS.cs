@@ -187,18 +187,7 @@ namespace CanteenManagementSystem.Model
                         DataTable dt2 = new DataTable();
                         da2.Fill(dt2);
 
-                        if (dt2.Rows[0]["orderType"].ToString() == "Take Away")
-                        {
-                            btnTakeAway.Checked = true;
-                            lblWaiter.Visible = false;
-                            lblTable.Visible = false;
-                        }
-                        else
-                        {
-                            btnDine.Checked = true;
-                            lblWaiter.Visible = true;
-                            lblTable.Visible = true;
-                        }
+                        
 
                         guna2DataGridView1.Rows.Clear();
 
@@ -500,7 +489,140 @@ namespace CanteenManagementSystem.Model
             }
         }
 
+        private void btnHold_Click(object sender, EventArgs e)
+        {
+            string qry1 = "";
+            string qry2 = "";
+            int detailId = 0;
+            MainID = 0;
 
+            string connectionString = "server=localhost;uid=root;pwd=1234;database=canteen_management_system";
+            using (MySqlConnection con = new MySqlConnection(connectionString))
+            {
+                try
+                {
+                    con.Open();
 
+                    if(OrderType == "")
+                    {
+                        guna2MessageDialog1.Show("Please select order type");
+                        return;
+                    }
+
+                    // Insert or Update the main order
+                    if (MainID == 0)
+                    {
+                        qry1 = @"INSERT INTO table_main (aDate, aTime, tableName, waiterName, status, orderType, total, recieved, `change`) 
+                         VALUES (@aDate, @aTime, @tableName, @waiterName, @status, @orderType, @total, @recieved, @change); 
+                         SELECT LAST_INSERT_ID()";
+                    }
+                    else
+                    {
+                        qry1 = @"UPDATE table_main 
+                         SET status = @status, total = @total, recieved = @recieved, `change` = @change 
+                         WHERE MainId = @mainId";
+                    }
+
+                    using (MySqlCommand cmd = new MySqlCommand(qry1, con))
+                    {
+                        cmd.Parameters.AddWithValue("@mainId", MainID);
+                        cmd.Parameters.AddWithValue("@aDate", Convert.ToDateTime(DateTime.Now.Date));
+                        cmd.Parameters.AddWithValue("@aTime", DateTime.Now.ToShortTimeString());
+                        cmd.Parameters.AddWithValue("@tableName", lblTable.Text);
+                        cmd.Parameters.AddWithValue("@waiterName", lblWaiter.Text);
+                        cmd.Parameters.AddWithValue("@status", "Hold");
+                        cmd.Parameters.AddWithValue("@orderType", OrderType);
+                        cmd.Parameters.AddWithValue("@total", Convert.ToDouble(totalLabel.Text));
+                        cmd.Parameters.AddWithValue("@recieved", Convert.ToDouble(0));
+                        cmd.Parameters.AddWithValue("@change", Convert.ToDouble(0));
+
+                        if (MainID == 0)
+                        {
+                            MainID = Convert.ToInt32(cmd.ExecuteScalar()); // Retrieve the last inserted ID
+                        }
+                        else
+                        {
+                            cmd.ExecuteNonQuery(); // Update the existing record
+                        }
+                    }
+
+                    // Insert or Update order details for each row in DataGridView
+                    foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+                    {
+                        if (row.IsNewRow) continue; // Skip the last empty row
+
+                        // Ensure cells are not null or empty
+                        string dgvIdStr = row.Cells["dgvid"].Value?.ToString();
+                        string proIdStr = row.Cells["dgvproID"].Value?.ToString();
+                        string qtyStr = row.Cells["dgvQty"].Value?.ToString();
+                        string priceStr = row.Cells["dgvPrice"].Value?.ToString();
+                        string amountStr = row.Cells["dgvAmount"].Value?.ToString();
+
+                        if (string.IsNullOrWhiteSpace(dgvIdStr) || string.IsNullOrWhiteSpace(proIdStr) ||
+                            string.IsNullOrWhiteSpace(qtyStr) || string.IsNullOrWhiteSpace(priceStr) || string.IsNullOrWhiteSpace(amountStr))
+                        {
+                            MessageBox.Show("Some cells are empty. Please fill in all details.");
+                            continue;
+                        }
+
+                        // Convert values
+                        detailId = Convert.ToInt32(dgvIdStr);
+                        int proId = Convert.ToInt32(proIdStr);
+                        int qty = Convert.ToInt32(qtyStr);
+                        double price = Convert.ToDouble(priceStr);
+                        double amount = Convert.ToDouble(amountStr);
+
+                        if (detailId == 0)
+                        {
+                            qry2 = @"INSERT INTO table_details (mainId, proId, qty, price, amount) 
+                             VALUES (@mainId, @proId, @qty, @price, @amount)";
+                        }
+                        else
+                        {
+                            qry2 = @"UPDATE table_details 
+                             SET proId = @proId, qty = @qty, price = @price, amount = @amount 
+                             WHERE detailId = @detailId";
+                        }
+
+                        using (MySqlCommand cmd2 = new MySqlCommand(qry2, con))
+                        {
+                            cmd2.Parameters.AddWithValue("@detailId", detailId);
+                            cmd2.Parameters.AddWithValue("@mainId", MainID);
+                            cmd2.Parameters.AddWithValue("@proId", proId);
+                            cmd2.Parameters.AddWithValue("@qty", qty);
+                            cmd2.Parameters.AddWithValue("@price", price);
+                            cmd2.Parameters.AddWithValue("@amount", amount);
+
+                            cmd2.ExecuteNonQuery(); // Insert or update the details record
+                        }
+                    }
+
+                    // Show success message
+                    guna2MessageDialog1.Show("Saved Successfully");
+
+                    // Reset form
+                    MainID = 0;
+                    detailId = 0;
+                    guna2DataGridView1.Rows.Clear();
+                    lblTable.Text = "";
+                    lblWaiter.Text = "";
+                    lblTable.Visible = false;
+                    lblWaiter.Visible = false;
+                    totalLabel.Text = "00";
+                }
+                catch (FormatException fex)
+                {
+                    MessageBox.Show("There was an issue with data formatting: " + fex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                finally
+                {
+                    con.Close(); // Ensure the connection is closed
+                }
+            }
+        }
     }
 }
