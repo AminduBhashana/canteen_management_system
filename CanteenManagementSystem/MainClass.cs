@@ -84,6 +84,31 @@ namespace CanteenManagementSystem
             return rowsAffected;
         }
 
+        // Method for executing select queries and returning a DataTable
+        public static DataTable ExecuteSelectQuery(string qry, Hashtable parameters)
+        {
+            DataTable dt = new DataTable();
+
+            using (MySqlConnection connection = new MySqlConnection(con_string))
+            {
+                connection.Open();
+
+                using (MySqlCommand command = new MySqlCommand(qry, connection))
+                {
+                    foreach (DictionaryEntry parameter in parameters)
+                    {
+                        command.Parameters.AddWithValue((string)parameter.Key, parameter.Value);
+                    }
+
+                    using (MySqlDataAdapter da = new MySqlDataAdapter(command))
+                    {
+                        da.Fill(dt);
+                    }
+                }
+            }
+
+            return dt;
+        }
 
         //For Loading data from database
 
