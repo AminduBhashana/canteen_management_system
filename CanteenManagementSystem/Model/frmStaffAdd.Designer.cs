@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStaffAdd));
             this.cbRole = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -47,6 +48,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(135)))), ((int)(((byte)(32)))));
             this.panel1.Size = new System.Drawing.Size(460, 100);
             // 
             // label1
@@ -56,7 +58,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CanteenManagementSystem.Properties.Resources.user_256;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             // 
             // panel2
@@ -70,6 +72,7 @@
             // 
             // saveButton
             // 
+            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
             this.saveButton.FlatAppearance.BorderSize = 0;
             // 
             // cbRole

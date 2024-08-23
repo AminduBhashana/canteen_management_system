@@ -309,7 +309,7 @@
             // 
             // btnCheckout
             // 
-            this.btnCheckout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
+            this.btnCheckout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
             this.btnCheckout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCheckout.FlatAppearance.BorderSize = 0;
             this.btnCheckout.ForeColor = System.Drawing.Color.White;
@@ -338,6 +338,7 @@
             this.categortBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.categortBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.categortBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.categortBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
             this.categortBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.categortBtn.ForeColor = System.Drawing.Color.White;
             this.categortBtn.Location = new System.Drawing.Point(15, 183);

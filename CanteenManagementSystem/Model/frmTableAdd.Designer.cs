@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTableAdd));
             this.nameText = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -37,6 +38,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
             this.panel1.Size = new System.Drawing.Size(406, 100);
             // 
             // label1
@@ -46,7 +48,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::CanteenManagementSystem.Properties.Resources.table_256;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             // 
             // panel2
@@ -60,6 +62,7 @@
             // 
             // saveButton
             // 
+            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
             this.saveButton.FlatAppearance.BorderSize = 0;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click_1);
             // 
