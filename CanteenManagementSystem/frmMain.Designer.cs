@@ -39,7 +39,6 @@
             this.categoryButton = new Guna.UI.WinForms.GunaButton();
             this.homeButton = new Guna.UI.WinForms.GunaButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.FacultyLogo = new System.Windows.Forms.PictureBox();
             this.TopPanel = new Guna.UI.WinForms.GunaPanel();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -47,7 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.CenterPanel = new Guna.UI.WinForms.GunaPanel();
             this.navigationPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FacultyLogo)).BeginInit();
             this.TopPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +61,6 @@
             this.navigationPanel.Controls.Add(this.categoryButton);
             this.navigationPanel.Controls.Add(this.homeButton);
             this.navigationPanel.Controls.Add(this.label1);
-            this.navigationPanel.Controls.Add(this.FacultyLogo);
             this.navigationPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.navigationPanel.Location = new System.Drawing.Point(0, 0);
             this.navigationPanel.Margin = new System.Windows.Forms.Padding(2);
@@ -332,19 +329,6 @@
             this.label1.Text = "Canteen  Management \r\nSystem";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FacultyLogo
-            // 
-            this.FacultyLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.FacultyLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.FacultyLogo.Image = ((System.Drawing.Image)(resources.GetObject("FacultyLogo.Image")));
-            this.FacultyLogo.Location = new System.Drawing.Point(113, 44);
-            this.FacultyLogo.Margin = new System.Windows.Forms.Padding(2);
-            this.FacultyLogo.Name = "FacultyLogo";
-            this.FacultyLogo.Size = new System.Drawing.Size(124, 120);
-            this.FacultyLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.FacultyLogo.TabIndex = 1;
-            this.FacultyLogo.TabStop = false;
-            // 
             // TopPanel
             // 
             this.TopPanel.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -430,7 +414,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.navigationPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FacultyLogo)).EndInit();
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -440,7 +423,6 @@
         #endregion
 
         private Guna.UI.WinForms.GunaPanel navigationPanel;
-        private System.Windows.Forms.PictureBox FacultyLogo;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaButton homeButton;
         private Guna.UI.WinForms.GunaButton productsButton;
