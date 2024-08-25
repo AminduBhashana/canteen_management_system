@@ -374,3 +374,5 @@ D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\Canteen
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmSelectWaiter.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmTableAdd.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmTableView.resources
+C:\Users\Chamath\Desktop\canteen_management\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmTableAdd.resources
+C:\Users\Chamath\Desktop\canteen_management\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmTableView.resources

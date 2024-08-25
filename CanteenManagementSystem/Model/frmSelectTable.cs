@@ -81,5 +81,10 @@ namespace CanteenManagementSystem.Model
             TableName = (sender as Guna.UI2.WinForms.Guna2Button).Text;
             this.Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
