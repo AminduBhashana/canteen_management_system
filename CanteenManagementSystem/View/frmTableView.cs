@@ -19,6 +19,8 @@ namespace CanteenManagementSystem.View
         {
             InitializeComponent();
             GetData();
+            guna2DataGridView1.CellClick += guna2DataGridView1_CellClick;
+
         }
 
         private void frmTableView_Load(object sender, EventArgs e)
