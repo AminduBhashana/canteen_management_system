@@ -50,5 +50,10 @@ namespace CanteenManagementSystem.Model
                 guna2MessageDialog1.Show("Error saving data.");
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

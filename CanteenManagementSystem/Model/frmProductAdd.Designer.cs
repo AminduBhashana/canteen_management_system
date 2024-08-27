@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductAdd));
             this.btnBrowse = new Guna.UI2.WinForms.Guna2Button();
             this.txtImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.cbCat = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -50,6 +51,10 @@
             // 
             // panel1
             // 
+<<<<<<< HEAD
+=======
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
+>>>>>>> main
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Size = new System.Drawing.Size(729, 100);
             this.panel1.TabIndex = 0;
@@ -61,7 +66,11 @@
             // 
             // pictureBox1
             // 
+<<<<<<< HEAD
             this.pictureBox1.Image = global::CanteenManagementSystem.Properties.Resources.product_256;
+=======
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+>>>>>>> main
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             // 
@@ -78,6 +87,7 @@
             // 
             // saveButton
             // 
+            this.saveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(153)))), ((int)(((byte)(32)))));
             this.saveButton.FlatAppearance.BorderSize = 0;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 

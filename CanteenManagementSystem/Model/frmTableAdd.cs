@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +18,40 @@ namespace CanteenManagementSystem.Model
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
+=======
+
+        public int id = 0;
+
+        private void saveButton_Click_1(object sender, EventArgs e)
+        {
+            string qry = "";
+
+            if (id == 0)
+            {
+                qry = "INSERT INTO tables (tName) VALUES (@Name)";
+            }
+            else
+            {
+                qry = "UPDATE tables SET tName = @Name WHERE tableId = @id";
+            }
+
+            Hashtable ht = new Hashtable();
+            ht.Add("@id", id);
+            ht.Add("@Name", nameText.Text);
+
+            if (MainClass.SQl(qry, ht) > 0)
+            {
+                MessageBox.Show("Saved successfully.");
+                id = 0;
+                nameText.Text = "";
+                nameText.Focus();
+            }
+            else
+            {
+                MessageBox.Show("Error saving data.");
+            }
+        }
+>>>>>>> main
     }
 }

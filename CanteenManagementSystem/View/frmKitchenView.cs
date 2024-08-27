@@ -1,17 +1,9 @@
 ﻿using Guna.UI2.WinForms;
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace CanteenManagementSystem.View
 {
@@ -27,66 +19,71 @@ namespace CanteenManagementSystem.View
             GetOrders();
         }
 
-
         private void GetOrders()
         {
-
             flowLayoutPanel1.Controls.Clear();
-           /* string qry1 = @"Select * from tblMain where status = 'Pending' ";
-            SqlCommand cmd1 = new SqlCommand(qry1, MainClass.con);
+
+            string qry1 = @"SELECT * FROM table_main WHERE status = 'pending'";
             DataTable dt1 = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd1);
-            da.Fill(dt1);
-*/
+            Hashtable parameters = new Hashtable(); // Empty parameters as none are needed for this query
+
+            dt1 = MainClass.ExecuteSelectQuery(qry1, parameters);
 
             FlowLayoutPanel p1;
 
-            /*for (int i = 0; i < dt1.Rows.Count; i++)*/
+            for (int i = 0; i < dt1.Rows.Count; i++)
             {
+                p1 = new FlowLayoutPanel
+                {
+                    AutoSize = true,
+                    Width = 230,
+                    Height = 350,
+                    FlowDirection = FlowDirection.TopDown,
+                    BorderStyle = BorderStyle.FixedSingle,
+                    Margin = new Padding(10)
+                };
 
-                p1 = new FlowLayoutPanel();
-                p1.AutoSize = true;
-                p1.Width = 230;
-                p1.Height = 350;
-                p1.FlowDirection = FlowDirection.TopDown;
-                p1.BorderStyle = BorderStyle.FixedSingle;
-                p1.Margin = new Padding(10, 10, 10, 10);
+                FlowLayoutPanel p2 = new FlowLayoutPanel
+                {
+                    BackColor = Color.FromArgb(50, 55, 89),
+                    AutoSize = true,
+                    Width = 230,
+                    Height = 125,
+                    FlowDirection = FlowDirection.TopDown,
+                    Margin = new Padding(0)
+                };
 
-                FlowLayoutPanel p2 = new FlowLayoutPanel();
-                p2 = new FlowLayoutPanel();
-                p2.BackColor = Color.FromArgb(50, 55, 89);
-                p2.AutoSize = true;
-                p2.Width = 230;
-                p2.Height = 125;
-                p2.FlowDirection = FlowDirection.TopDown;
-                p2.Margin = new Padding(0, 0, 0, 0);
+                Label lb1 = new Label
+                {
+                    ForeColor = Color.White,
+                    Margin = new Padding(10, 10, 3, 0),
+                    AutoSize = true,
+                    Text = "Table: " + dt1.Rows[i]["tableName"].ToString()
+                };
 
-                Label lb1 = new Label();
-                lb1.ForeColor = Color.White;
-                lb1.Margin = new Padding(10, 10, 3, 0);
-                lb1.AutoSize = true;
+                Label lb2 = new Label
+                {
+                    ForeColor = Color.White,
+                    Margin = new Padding(10, 5, 3, 0),
+                    AutoSize = true,
+                    Text = "Waiter Name: " + dt1.Rows[i]["waiterName"].ToString()
+                };
 
-                Label lb2 = new Label();
-                lb2.ForeColor = Color.White;
-                lb2.Margin = new Padding(10, 5, 3, 0);
-                lb2.AutoSize = true;
+                Label lb3 = new Label
+                {
+                    ForeColor = Color.White,
+                    Margin = new Padding(10, 5, 3, 0),
+                    AutoSize = true,
+                    Text = "Order Time: " + dt1.Rows[i]["aTime"].ToString()
+                };
 
-                Label lb3 = new Label();
-                lb3.ForeColor = Color.White;
-                lb3.Margin = new Padding(10, 5, 3, 0);
-                lb3.AutoSize = true;
-
-                Label lb4 = new Label();
-                lb4.ForeColor = Color.White;
-                lb4.Margin = new Padding(10, 5, 3, 10);
-                lb4.AutoSize = true;
-
-
-
-               /* lb1.Text = "Table : + dt1.Rows[i]["TableName"].ToString();
-                lb2.Text = "Waiter Name : + dt1.Rows[i]["WaiterName"].ToString(); 
-                lb3.Text = "Order Time : + dt1.Rows[i]["aTime"].ToString();
-                lb4.Text = "Order Type : + dt1.Rows[i]["orderType"].ToString();*/
+                Label lb4 = new Label
+                {
+                    ForeColor = Color.White,
+                    Margin = new Padding(10, 5, 3, 10),
+                    AutoSize = true,
+                    Text = "Order Type: " + dt1.Rows[i]["orderType"].ToString()
+                };
 
                 p2.Controls.Add(lb1);
                 p2.Controls.Add(lb2);
@@ -95,80 +92,70 @@ namespace CanteenManagementSystem.View
 
                 p1.Controls.Add(p2);
 
-                // now add products
+                // Retrieve products related to the current order
+                int mid = Convert.ToInt32(dt1.Rows[i]["mainId"].ToString());
 
-                int mid = 0;
-                //mid = Convert.ToInt32(dt1.Rows[i]["MainID"].ToString());
+                string qry2 = @"SELECT * FROM table_main m
+                                INNER JOIN table_details d ON m.mainId = d.mainId 
+                                INNER JOIN products p ON p.productId = d.proId
+                                WHERE m.mainId = @mainId";
+                Hashtable ht = new Hashtable();
+                ht.Add("@mainId", mid);
 
-                string qry2 = @"Select * from tblMain m
-		                         inner join tblDetails d on m.MainID = d.MainID 
-		                         inner join products p on p.pID = d.proID
-			                        Where m.MainID = " + mid + "";
+                DataTable dt2 = MainClass.ExecuteSelectQuery(qry2, ht);
 
-            /*    SqlCommand cmd2 = new SqlCommand(qry2, MainClass.con);
-                DataTable dt2 = new DataTable();
-                SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
-                da2.Fill(dt2);*/
-
-
-
-                //for (int j = 0; j < dt2.Rows.Count; j++)
+                for (int j = 0; j < dt2.Rows.Count; j++)
                 {
-
-                    Label lb5 = new Label();
-                    lb5.ForeColor = Color.White;
-                    lb5.Margin = new Padding(10, 5, 3, 0);
-                    lb5.AutoSize = true;
-
-                   // int no = j + 1;
-
-                   // lb5.Text = "" + no + " " + dt2.Rows[j]["pName"].ToString() + " " + dt2.Rows[j]["qty"].ToString();
+                    Label lb5 = new Label
+                    {
+                        ForeColor = Color.White,
+                        Margin = new Padding(10, 5, 3, 0),
+                        AutoSize = true,
+                        Text = $"{j + 1}. {dt2.Rows[j]["productName"].ToString()} - {dt2.Rows[j]["qty"].ToString()}"
+                    };
 
                     p1.Controls.Add(lb5);
                 }
 
-                //Add button to change the order status
-
-                Guna.UI2.WinForms.Guna2Button b = new Guna.UI2.WinForms.Guna2Button();
-                b.AutoRoundedCorners = true;
-                b.Size = new Size(100, 35);
-                b.FillColor = Color.FromArgb(241, 85, 126);
-                b.Margin = new Padding(30, 5, 3, 10);
-                b.Text = "Complete";
-               // b.Tag = dt1.Rows[i]["MainID"].ToString(); //store the id
+                // Add a button to change the order status
+                Guna2Button b = new Guna2Button
+                {
+                    AutoRoundedCorners = true,
+                    Size = new Size(100, 35),
+                    FillColor = Color.FromArgb(241, 85, 126),
+                    Margin = new Padding(30, 5, 3, 10),
+                    Text = "Complete",
+                    Tag = dt1.Rows[i]["mainId"].ToString() // Store the id
+                };
 
                 b.Click += new EventHandler(b_click);
                 p1.Controls.Add(b);
 
-
                 flowLayoutPanel1.Controls.Add(p1);
-
             }
-
         }
 
         private void b_click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32((sender as Guna.UI2.WinForms.Guna2Button).Tag.ToString());
+            int id = Convert.ToInt32((sender as Guna2Button).Tag.ToString());
 
-            guna2MessageDialog1.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
-            guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            guna2MessageDialog1.Icon = MessageDialogIcon.Question;
+            guna2MessageDialog1.Buttons = MessageDialogButtons.YesNo;
 
-            if (guna2MessageDialog1.Show("Are you sure you want to delete?") == DialogResult.Yes)
+            if (guna2MessageDialog1.Show("Are you sure you want to mark this order as complete?") == DialogResult.Yes)
             {
-
-                string qry = @"Update tblMain set status = 'Complete' where MainID = @ID";
+                string qry = @"UPDATE table_main SET status = 'Complete' WHERE mainId = @ID";
                 Hashtable ht = new Hashtable();
                 ht.Add("@ID", id);
 
                 if (MainClass.SQl(qry, ht) > 0)
                 {
-                    guna2MessageDialog1.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                    guna2MessageDialog1.Show("Saved Successfully");
+                    guna2MessageDialog1.Buttons = MessageDialogButtons.OK;
+                    guna2MessageDialog1.Show("Order marked as complete successfully.");
                 }
-                GetOrders();
-            }
 
+                GetOrders(); // Refresh orders
+            }
         }
     }
 }
