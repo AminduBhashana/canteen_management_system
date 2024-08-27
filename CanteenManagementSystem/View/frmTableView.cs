@@ -1,7 +1,11 @@
 ﻿using CanteenManagementSystem.Model;
+<<<<<<< HEAD
+using System;
+=======
 using Guna.UI2.WinForms;
 using System;
 using System.Collections;
+>>>>>>> main
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +23,17 @@ namespace CanteenManagementSystem.View
         {
             InitializeComponent();
             GetData();
+            guna2DataGridView1.CellClick += guna2DataGridView1_CellClick;
+
         }
 
+<<<<<<< HEAD
+        private void addButton_Click_1(object sender, EventArgs e)
+        {
+            MainClass.BlurBackground(new frmTableAdd());
+            /*frmTableAdd frm = new frmTableAdd();
+            frm.ShowDialog();*/
+=======
         private void frmTableView_Load(object sender, EventArgs e)
         {
             GetData();
@@ -84,6 +97,7 @@ namespace CanteenManagementSystem.View
                     GetData();
                 }
             }
+>>>>>>> main
         }
     }
 }

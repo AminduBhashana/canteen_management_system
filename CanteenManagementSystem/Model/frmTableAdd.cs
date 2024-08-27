@@ -18,6 +18,8 @@ namespace CanteenManagementSystem.Model
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
+=======
 
         public int id = 0;
 
@@ -50,5 +52,6 @@ namespace CanteenManagementSystem.Model
                 MessageBox.Show("Error saving data.");
             }
         }
+>>>>>>> main
     }
 }
