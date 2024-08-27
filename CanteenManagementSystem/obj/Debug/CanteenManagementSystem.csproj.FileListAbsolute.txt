@@ -370,9 +370,12 @@ E:\Academic Year 2 Sem 2\Visual Programming Project\New folder\canteen_managemen
 E:\Academic Year 2 Sem 2\Visual Programming Project\New folder\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenM.3F3B83DF.Up2Date
 E:\Academic Year 2 Sem 2\Visual Programming Project\New folder\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.exe
 E:\Academic Year 2 Sem 2\Visual Programming Project\New folder\canteen_management_system\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.pdb
+<<<<<<< HEAD
+=======
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmSelectTable.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmSelectWaiter.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmTableAdd.resources
 D:\C# Projects\CanteenManagementSystem\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmTableView.resources
 C:\Users\Chamath\Desktop\canteen_management\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.Model.frmTableAdd.resources
 C:\Users\Chamath\Desktop\canteen_management\CanteenManagementSystem\obj\Debug\CanteenManagementSystem.View.frmTableView.resources
+>>>>>>> main
